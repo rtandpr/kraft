@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./logos.module.css";
+import styles from "./Logos.module.css";
 import logoFb from '../../assets/facebook.png';
 
 
