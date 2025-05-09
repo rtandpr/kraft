@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('../../fonts/fonnts.com-Neulis_Sans_Hairline_Italic.otf') format('opentype');
+    font-weight: 100; /* Hairline suele ser muy delgado */
+    font-style: italic;
+}
+
+
+body{
+    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+}
+
+.swal-custom-font {
+    font-size: 28px !important;
+  }
+
+
+  @media (max-width: 768px) {
+     /* .divSpac{
+      display: none;
+     } */
+  }

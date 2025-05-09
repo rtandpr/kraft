@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Neulis';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
+}
+
+
+.container {
+  background-image: url("../../assets2/fondo2.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 240vh;
+  z-index: -1;
+  padding-top: 180px;
+  font-family: 'Neulis', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #32ab56;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titleImg2 {
+  width: 85%;
+  position: relative;
+}
+
+.titularIMG {
+  width: 45%;
+  position: relative;
+  margin-top: 120px;
+}
+
+
+.titleImg {
+  width: 30%;
+  position: relative;
+  top: 50px;
+}
+
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.formGroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.a {
+  margin-top: 50px;
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  margin-left: 5px;
+}
+
+.p {
+  margin-top: 40px;
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 24px;
+}
+
+
+.containerFooter {
+  margin-top: -170px;
+  padding-top: 100px;
+  background-color: white;
+}
+
+
+.contentInputsCheck {
+  display: flex;
+  justify-content: flex-start;
+  /* Alinea los elementos hijos hacia la izquierda */
+  min-width: 995px;
+}
+
+.divChek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 40px;
+}
+
+.divChek input {
+  margin-right: 10px;
+}
+
+
+.productosImg {
+  position: relative;
+  right: 30px;
+  top: -30px;
+  width: 17%;
+}
+
+.brResp {
+  display: none;
+}
+
+
+
+
+/* estilos para el texto del usuario */
+
+.containerQuestion {
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+
+  font-family: Arial, sans-serif;
+  color: #2e3a59;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.textArea {
+  display: block;
+  margin-top: 12px;
+  width: 100%;
+  min-width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+  /* Opcional: para evitar que el usuario cambie el tamaño */
+  vertical-align: top;
+}
+
+/* estilos para el texto del usuario */
+
+/* Estilos para el footer */
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 100px;
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: 40px;
+}
+
+/* Estilos para el footer */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-top: 0px;
+  }
+
+  .productosImg {
+    width: 75%;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px !important;
+  }
+
+  .titleImg {
+    width: 95%;
+    top: 10px;
+    margin-top: 30px !important;
+  }
+
+  .titleImg2 {
+    width: 65%;
+    position: relative;
+  }
+
+  .titularIMG {
+    width: 95%;
+    position: relative;
+    margin-top: 20px;
+  }
+
+
+
+  .p {
+    padding: 20px;
+  }
+
+  .formGroup {
+    flex-direction: column;
+  }
+
+  .contentInputsCheck {
+    flex-direction: column;
+    padding: 20px;
+    min-width: none;
+  }
+
+  .contentInputsCheck {
+    display: flex;
+    justify-content: flex-start;
+    /* Alinea los elementos hijos hacia la izquierda */
+    min-width: 100px;
+    padding-top: 0px;
+    text-align: left;
+    align-items: start;
+  }
+  
+
+  .containerQuestion {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100vw;
+    max-width: 100vw;
+    
+    font-family: Arial, sans-serif;
+    color: #2e3a59;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: -25px;
+  }
+
+  .label {
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    left: 30px;
+  }
+
+  .textArea {
+    display: block;
+    margin-top: 12px;
+    width: 100px;
+    max-width: 330px !important;
+    min-width: 330px !important;
+    height: 100px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    /* Opcional: para evitar que el usuario cambie el tamaño */
+    vertical-align: top;;
+    position: relative;
+    left: 5.5%;
+  }
+
+
+  .divChek {
+    margin: 0 !important;
+    position: relative;
+     right: 27px; 
+  }
+
+  .brResp {
+    display: flex;
+  }
+
+  .footer {
+    margin-top: 30px;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 40px;
+  }
+}

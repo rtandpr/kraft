@@ -1,0 +1,35 @@
+import React from 'react';
+import styles from './footer.module.css';
+import logoFb from '../../assets/facebook.png';
+import logoRalph from '../../assets/Ralphs.png';
+import { Link } from 'react-router-dom';
+import productosImg from "../../assets/productos.png";
+import LogosRedes from '../logosRedes/LogosRedes';
+
+const Footer = () => {
+  return (
+    <>
+
+      <footer className={styles.footer}>
+
+
+        <div className={styles.links}>
+          <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+          <br className={styles.brResp} />
+          <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
+        </div>
+        <p className={styles.promotion}>
+          "Sorteo termina el 31 de julio de 2025. Puede participar toda persona mayor de edad, residente legal de PR. No es necesario comprar para participar y ganar.
+          <br />
+          Promotor: Kraft Foods Group Puerto Rico, LLC. Reglas oficiales en sabeakraftheinz.com
+        </p>
+
+
+        <LogosRedes></LogosRedes>
+
+      </footer>
+    </>
+  );
+};
+
+export default Footer;

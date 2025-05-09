@@ -1,0 +1,96 @@
+
+
+.content{
+    max-width: 100%;
+    letter-spacing: 1.4px
+}
+
+.contentInput{
+    position: relative;
+    max-width:430px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.label{
+    margin-left: 5px;
+    color: #2b469c;
+}
+
+.inputField{
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 120px;
+    padding-right:80px ;
+    padding-bottom: 20px;
+    /* border: 1px solid white; */
+    color: aliceblue;
+    max-width:300px;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+
+.inputField::placeholder{
+    color: rgb(206, 226, 243);
+    font-size: 15px;
+    font-size: 17px;
+}
+
+.iconInput{
+    position: absolute;
+    left:10%;
+    top: 13px;
+}
+
+.iconInputDer{
+    position: absolute;
+    right:20px;
+    top: 25%;
+}
+
+
+.Perr{
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .contentInput{
+        max-width:100vw;
+        padding-left: 0px;
+        padding-left: 20px;
+    }
+    
+    .inputField{
+        padding-left: 80px;
+        padding-right: 60px;
+        max-width:190px !important;
+        min-width: 190px !important;
+        border: 1px solid black !important;
+    }
+
+    .iconInput{
+        position: absolute;
+        left:15%;
+        top: 13px;
+    }
+    
+    .iconInputDer{
+        position: absolute;
+        right:10%;
+        top: 25%;
+    }
+
+    .Perr{
+        left: 30px;
+    }
+    
+    
+  }
