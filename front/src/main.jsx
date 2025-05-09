@@ -6,14 +6,10 @@ import { initGA } from './ga.js';
 import { BrowserRouter } from 'react-router-dom';
 
 
-
-
-
 initGA();
 
 createRoot(document.getElementById('root')).render(
   
-
       <App />
 
 )
