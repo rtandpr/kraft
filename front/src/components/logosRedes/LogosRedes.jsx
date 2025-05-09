@@ -3,6 +3,7 @@ import styles from "./logos.module.css";
 import logoFb from '../../assets/facebook.png';
 
 
+
 const LogosRedes = () => {
 
     return (
