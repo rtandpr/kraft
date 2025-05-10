@@ -159,7 +159,8 @@
 
 
     .contentText{
-        top: 34vh;
+        top: 39vh;
+
     }
 
     .contentText p{
@@ -177,13 +178,31 @@
     
     .text2IMG{
         width: 95%;
-        margin-top: 30px
+        margin-top: 30px;
+        
+        
     }
 
     
     .containerFooter{
-        margin-top: 0vh;
+        margin-top: -16vw;
+        background-color: transparent;
     }
 
 
   }
+
+
+  
+@media (max-width:381px) {
+    .contentText{
+        top: 35vh;
+
+    }
+
+    .containerFooter{
+        margin-top: 0vw;
+        background-color: transparent;
+    }
+
+}
