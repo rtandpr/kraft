@@ -51,30 +51,42 @@ const Home = () => {
     <div className={styles.homeFondo}>
       <Navbar></Navbar>
       <div className={styles.homeBackground}>
-        <img
-          src={LogoImg}
-          className={styles.LogoImg}
-          data-aos="fade-right"
-        />
+
+        <div className={styles.containerLogo}>
+          <img
+            src={LogoImg}
+            className={styles.LogoImg}
+            data-aos="fade-right"
+          />
 
 
-        <img
-          data-aos="zoom-in"
-          src={titularIMG}
-          className={styles.titularIMG}
-        />
+
+        </div>
+
+        <div className={styles.containerLogo}>
+
+          <img
+            data-aos="zoom-in"
+            src={titularIMG}
+            className={styles.titularIMG}
+          />
+
+
+
+        </div>
+
 
         <div className={styles.contentText}>
 
           <p>Sube tu recibo de compra con productos participantes</p>
 
           {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
-            <img
-              data-aos="zoom-in"
-              src={button}
-              className={styles.buttonLog}
-              style={{ cursor: "pointer" }}
-            />
+          <img
+            data-aos="zoom-in"
+            src={button}
+            className={styles.buttonLog}
+            style={{ cursor: "pointer" }}
+          />
           {/* </Link> */}
           <img
             data-aos="zoom-in"

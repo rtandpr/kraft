@@ -29,10 +29,9 @@
 }
 
 
-.secondImg{
+.containerLogo{
     width: 100%;
-    z-index: 1; 
-    height: 30px;
+    text-align: center;
 }
 
 .LogoImg{
@@ -40,8 +39,14 @@
     height: auto;
     position: relative;
     top: 13vh;
-    left: 610px;
     z-index: 1; 
+}
+
+
+.secondImg{
+    width: 100%;
+    z-index: 1; 
+    height: 30px;
 }
 
 
@@ -50,7 +55,7 @@
     left: -50px;
     height: auto;
     position: relative;
-    top: 30vh;
+    top: 13vh;
 
 }
 
@@ -118,7 +123,7 @@
 
     .titularIMG{
         width: 90%;
-        left: 20px;
+        left: 0px;
         height: auto;
         position: relative;
         top: 20vh;
