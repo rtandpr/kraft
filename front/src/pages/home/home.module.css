@@ -133,13 +133,21 @@
     }
 
     .LogoImg{
-        width: 70%;
+        width: 60%;
         height: auto;
         position: relative;
-        top: 12vh;
-        left: 0%;
+        top: 7vh;
+        left: -10px;
         z-index: 1; 
        
+    }
+
+    .titularIMG{
+        width: 70%;
+        left: 0px;
+        height: auto;
+        position: relative;
+        top: 9vh;
     }
 
 
@@ -149,13 +157,6 @@
     }
 
 
-    .titularIMG{
-        width: 90%;
-        left: 0px;
-        height: auto;
-        position: relative;
-        top: 13vh;
-    }
 
     .contentText{
         top: 59vh;
