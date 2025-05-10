@@ -110,7 +110,7 @@
   /* Convierte el texto a mayúsculas */
   letter-spacing: 2px;
   /* Agrega espacio entre las letras */
-  font-size:35px;
+  font-size:30px;
   -webkit-text-fill-color: #21459a; /* Azul más grueso */
   -webkit-text-stroke: .7px #fff; /* Borde blanco más fino */
 }
