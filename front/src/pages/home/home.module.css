@@ -39,7 +39,7 @@
     height: auto;
     position: relative;
     right: 60px;
-    top: 13vh;
+    top: 18vh;
     z-index: 1; 
 }
 
@@ -56,7 +56,7 @@
     left: -50px;
     height: auto;
     position: relative;
-    top: 13vh;
+    top: 18vh;
 
 }
 
@@ -65,7 +65,7 @@
     width: 100%;
     text-align: center;
     position: relative;
-    top: 70vh;
+    top: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,6 +97,22 @@
 
 .containerFooter{
     margin-top: -25vh;
+}
+
+
+@media (max-width: 1200px) {
+
+.contentText{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+ }
 }
 
 @media (max-width: 950px) {
