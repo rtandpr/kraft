@@ -71,6 +71,7 @@ const Home = () => {
             src={titularIMG}
             className={styles.titularIMG}
           />
+          
 
 
 
