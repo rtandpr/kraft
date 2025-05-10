@@ -362,20 +362,6 @@ const Registro = () => {
 
 
 
-
-          <div className={styles.contentInputsCheck} style={{ marginTop: "40px" }}>
-            <div className={styles.containerQuestion}>
-              <label className={styles.label}>
-                ¿A qué te sabe Kraft Heinz?
-              </label>
-              <textarea className={styles.textArea}></textarea>
-            </div>
-          </div>
-
-
-
-
-
           <div className={styles.contentInputsCheck}>
             <div className={styles.divChek} style={{ marginLeft: "18.5px" }}>
               <input
