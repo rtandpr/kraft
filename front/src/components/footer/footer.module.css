@@ -39,6 +39,7 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
+  font-family: 'Neulis2', sans-serif !important;
 }
 
 .links a:hover {

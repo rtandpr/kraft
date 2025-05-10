@@ -110,9 +110,9 @@
   /* Convierte el texto a mayúsculas */
   letter-spacing: 2px;
   /* Agrega espacio entre las letras */
-  font-size: 40px;
+  font-size:35px;
   -webkit-text-fill-color: #21459a; /* Azul más grueso */
-  -webkit-text-stroke: 2.4px #fff; /* Borde blanco más fino */
+  -webkit-text-stroke: .7px #fff; /* Borde blanco más fino */
 }
 
 .navbar-links a:hover {
