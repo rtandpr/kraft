@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Neulis';
-  src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+  src: url('../../fonts/fonnts.com-Neulis_Sans_Bold_Italic.otf') format('opentype');
   font-weight: 700;
   /* Hairline suele ser muy delgado */
   font-style: bold;
@@ -111,8 +111,8 @@
   letter-spacing: 2px;
   /* Agrega espacio entre las letras */
   font-size: 50px;
-  -webkit-text-fill-color: rgb(27, 40, 110); /* Azul más grueso */
-  -webkit-text-stroke: 2.4px white; /* Borde blanco más fino */
+  -webkit-text-fill-color: #21459a; /* Azul más grueso */
+  -webkit-text-stroke: 2.4px #fff; /* Borde blanco más fino */
 }
 
 .navbar-links a:hover {

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Logos.module.css";
-import logoFb from '../../assets/facebook.png';
+// import logoFb from '../../assets/facebook.png';
 
-
+import logoFb from '../../assets2/rrss.png';
 
 const LogosRedes = () => {
 
@@ -15,12 +15,12 @@ const LogosRedes = () => {
               <a href="https://www.facebook.com/7UPPR" target="_blank" rel="noopener noreferrer">
                 <img src={logoFb} alt="Facebook" />
               </a>
-              <a href="https://www.facebook.com/7UPPR" target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://www.facebook.com/7UPPR" target="_blank" rel="noopener noreferrer">
                 <img src={logoFb} alt="Facebook" />
               </a>
               <a href="https://www.facebook.com/7UPPR" target="_blank" rel="noopener noreferrer">
                 <img src={logoFb} alt="Facebook" />
-              </a>
+              </a> */}
             </div>
           </div>
 

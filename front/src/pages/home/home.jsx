@@ -64,7 +64,6 @@ const Home = () => {
           className={styles.titularIMG}
         />
 
-
         <div className={styles.contentText}>
 
           <p>Sube tu recibo de compra con productos participantes</p>

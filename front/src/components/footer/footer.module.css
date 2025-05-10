@@ -6,16 +6,24 @@
   font-style: bold;
 }
 
+@font-face {
+  font-family: 'Neulis2';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Regular.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
+}
+
+
 .footer {
   background-color: #d09b5c;
   padding: 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
   font-size: 10px;
   color: #333;
   /* position: relative;
     top: -70px; */
-  /* font-family: 'Neulis', sans-serif !important; */
+  font-family: 'Neulis', sans-serif !important;
   /* Usa 'sans-serif' como respaldo */
 
 }
@@ -42,6 +50,8 @@
   color: #ffffff;
   margin: 10px 0;
   font-weight: 400;
+  
+  font-family: 'Neulis2', sans-serif !important;
 }
 
 .promotion a {

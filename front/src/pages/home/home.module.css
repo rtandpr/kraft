@@ -1,9 +1,18 @@
 @font-face {
     font-family: 'Neulis';
-    src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+    src: url('../../fonts/fonnts.com-Neulis_Sans_Bold_Italic.otf') format('opentype');
     font-weight: 100; /* Hairline suele ser muy delgado */
     font-style: bold;
 }
+
+
+@font-face {
+    font-family: 'Neulis2';
+    src: url('../../fonts/fonnts.com-Neulis_Neue_Medium.otf') format('opentype');
+    font-weight: 100; /* Hairline suele ser muy delgado */
+    font-style: bold;
+}
+
 
 .homeBackground{
     width: 100%;
@@ -30,10 +39,9 @@
     width: 30%;
     height: auto;
     position: relative;
-    top: 8vh;
-    left: 650px;
+    top: 13vh;
+    left: 610px;
     z-index: 1; 
-    
 }
 
 
@@ -42,7 +50,7 @@
     left: -50px;
     height: auto;
     position: relative;
-    top: 26vh;
+    top: 30vh;
 
 }
 
@@ -51,7 +59,7 @@
     width: 100%;
     text-align: center;
     position: relative;
-    top: 100vh;
+    top: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,9 +68,9 @@
 }
 
 .contentText p{
-    font-size: 22px;
-    font-family: 'Neulis', sans-serif; /* Usa 'sans-serif' como respaldo */
-    color: #153e64 !important;
+    font-size: 19px;
+    font-family: 'Neulis2', sans-serif !important; /* Usa 'sans-serif' como respaldo */
+    color: #1d40a0 !important;
 }
 
 .buttonLog{
@@ -95,6 +103,7 @@
         top: 15vh;
         left: 10%;
         z-index: 1; 
+       
     }
 
     .LogoImg{
