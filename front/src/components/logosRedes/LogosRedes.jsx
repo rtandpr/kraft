@@ -22,6 +22,7 @@ const LogosRedes = () => {
                 <img src={logoFb} alt="Facebook" />
               </a> */}
             </div>
+            
           </div>
 
 
