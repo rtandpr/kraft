@@ -136,15 +136,12 @@
         width: 70%;
         height: auto;
         position: relative;
-        top: 15vh;
-        left: 10%;
+        top: 12vh;
+        left: 0%;
         z-index: 1; 
        
     }
 
-    .LogoImg{
-        display: none;
-    }
 
     .fadeDownRight {
       opacity: 1;
@@ -157,7 +154,7 @@
         left: 0px;
         height: auto;
         position: relative;
-        top: 20vh;
+        top: 13vh;
     }
 
     .contentText{
