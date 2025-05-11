@@ -38,7 +38,7 @@
 
 
 .titleImg {
-  width: 40%;
+  width: 25%;
   margin-top: -50px;
 }
 
@@ -50,6 +50,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  padding-left: 100px;
 }
 
 .formGroup {
@@ -153,13 +154,30 @@
   margin-top: 40px;
 }
 
+@media (max-width: 1200px) {
+
+  
+.loginForm {
+  padding-left: 0px;
+}
+
+
+}
+
 /* Estilos para el footer */
 
 @media (max-width: 768px) {
 
+  .container {
+  background-image: url("../../assets2/fondo2Reg.jpg");
+  /* Usa 'sans-serif' como respaldo */
+}
+
+
   .loginForm {
     margin-top: 0px;
   }
+  
 
 
   .container {
