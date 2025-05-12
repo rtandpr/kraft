@@ -79,14 +79,14 @@ const Home = () => {
 
           {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
           <img
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             src={button}
             className={styles.buttonLog}
             
           />
           {/* </Link> */}
           <img
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             src={text2IMG}
             className={styles.text2IMG}
           />
