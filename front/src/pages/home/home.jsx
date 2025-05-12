@@ -56,7 +56,7 @@ const Home = () => {
           <img
             src={LogoImg}
             className={styles.LogoImg}
-            data-aos="fade-right"
+            // data-aos="fade-right"
           />
 
 
@@ -66,7 +66,7 @@ const Home = () => {
 
         <div className={styles.containerLogo} >
           <img
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             src={titularIMG}
             className={styles.titularIMG}
           />

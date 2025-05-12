@@ -46,36 +46,17 @@ const Navbar = () => {
 
 
 
-  const goToSection = (id) => {
-    localStorage.setItem('scrollTo', id); // Guardamos la sección
-    navigate('/'); // Navegamos al home
-  };
-
-
-  const scrollToSection = (id) => {
-
-    setIsMenuOpen(false)
-    if (window.location.pathname !== '/') {
-      localStorage.setItem('scrollTo', id); // Guardamos la sección
-      navigate('/'); // Navegamos al home
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
 
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 150);
-    };
+    // const handleScroll = () => {
+    //   setIsScrolled(window.scrollY > 150);
+    // };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
+    // return () => window.removeEventListener("scroll", handleScroll);
 
   }, []);
 
