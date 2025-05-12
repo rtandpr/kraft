@@ -51,7 +51,7 @@
   color: #ffffff !important;
   margin: 10px 0;
   font-weight: 400;
-  
+
   font-family: 'Neulis2', sans-serif !important;
 }
 
@@ -95,13 +95,28 @@
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
+  .footer {
+    background-color: #d09b5c;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: white !important;
+    /* position: relative;
+    top: -70px; */
+    font-family: 'Neulis', sans-serif !important;
+    /* Usa 'sans-serif' como respaldo */
+    max-width: 95%;
+
+
+  }
+
   .links {
     flex-direction: column-reverse;
     /* Coloca los enlaces en una columna */
     gap: 5px;
   }
 
-  .links a{
+  .links a {
     font-size: 18px !important;
   }
 
@@ -114,6 +129,12 @@
     font-size: 10px;
     padding: 0 10px;
     /* Reduce el espacio lateral */
+
+    text-align: justify;
+  }
+
+  .textjUST{
+     text-align: justify;
   }
 
   .social {
@@ -137,7 +158,7 @@
     display: none;
   }
 
-  .footer{
+  .footer {
     padding-top: 0px;
   }
 }

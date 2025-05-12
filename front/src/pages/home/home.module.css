@@ -169,7 +169,7 @@
 
 
     .contentText{
-        top: 42vh;
+        top: 36vh;
     }
 
 
@@ -212,6 +212,10 @@
     }
 
 
+
+    .contentText{
+        top: 55vh;
+    }
 
 
 } 
