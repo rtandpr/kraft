@@ -134,7 +134,7 @@
 @media (max-width: 950px) {
 
     .homeBackground{
-        height: 150vh; 
+        height: 130vh; 
         background-position: center center;  
         background-repeat: no-repeat; 
         background-image: url("../../assets2/fondo_mobile.jpg"); 
@@ -169,8 +169,7 @@
 
 
     .contentText{
-        top: 65vh;
-        border: 1px solid black;
+        top: 42vh;
     }
 
 
@@ -190,6 +189,7 @@
     .text2IMG{
         width: 95%;
         margin-top: 30px;
+        margin-bottom: 40px;
     }
 
     
@@ -203,15 +203,15 @@
 
 
   
-/* @media (max-width:381px) {
-    .contentText{
-        top: 35vh;
-
+ @media (max-width:381px) {
+    .homeBackground{
+        height: 165vh; 
+        background-position: center center;  
+        background-repeat: no-repeat; 
+        background-image: url("../../assets2/fondo_mobile.jpg"); 
     }
 
-    .containerFooter{
-        margin-top: 0vw;
-        background-color: transparent;
-    }
 
-} */
+
+
+} 
