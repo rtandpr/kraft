@@ -1,5 +1,5 @@
 .social {
-    margin: 10px 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,8 @@
     padding-left: 140px;
     padding-right: 140px;
     padding-bottom: 20px;
+    position: relative; ;
+    top: -5px;
   }
   
   .socialIcons{
