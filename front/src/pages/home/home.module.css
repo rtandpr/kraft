@@ -132,11 +132,14 @@
 
 
 @media (max-width: 950px) {
+
     .homeBackground{
-        height: 100vh; 
+        height: 150vh; 
         background-position: center center;  
         background-repeat: no-repeat; 
+        background-image: url("../../assets2/fondo_mobile.jpg"); 
     }
+
 
     .LogoImg{
         width: 60%;
@@ -147,6 +150,7 @@
         z-index: 1; 
        
     }
+
 
     .titularIMG{
         width: 70%;
@@ -165,9 +169,10 @@
 
 
     .contentText{
-        top: 39vh;
-
+        top: 65vh;
+        border: 1px solid black;
     }
+
 
     .contentText p{
         font-size: 17px;
@@ -198,7 +203,7 @@
 
 
   
-@media (max-width:381px) {
+/* @media (max-width:381px) {
     .contentText{
         top: 35vh;
 
@@ -209,4 +214,4 @@
         background-color: transparent;
     }
 
-}
+} */
