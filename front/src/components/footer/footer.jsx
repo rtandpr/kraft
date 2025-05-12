@@ -18,11 +18,11 @@ const Footer = () => {
           <br className={styles.brResp} />
           <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
         </div>
-        <p className={styles.promotion}>
+        <span className={styles.promotion}>
           "Sorteo termina el 31 de julio de 2025. Puede participar toda persona mayor de edad, residente legal de PR. No es necesario comprar para participar y ganar.
           <br />
           Promotor: Kraft Foods Group Puerto Rico, LLC. Reglas oficiales en sabeakraftheinz.com
-        </p>
+        </span>
 
 
         <LogosRedes></LogosRedes>
