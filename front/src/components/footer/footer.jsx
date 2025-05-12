@@ -16,7 +16,7 @@ const Footer = () => {
         <div className={styles.links}>
           <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
           <br className={styles.brResp} />
-          <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
+          <Link to="/Priv"><span className={styles.privSpan}>AVISO DE PRIVACIDAD</span></Link>
         </div>
         <div className={styles.textjUST}>
 

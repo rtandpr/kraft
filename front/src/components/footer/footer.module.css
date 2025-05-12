@@ -106,7 +106,8 @@
     font-family: 'Neulis', sans-serif !important;
     /* Usa 'sans-serif' como respaldo */
     max-width: 95%;
-
+    position: relative;
+    top: -30px;
 
   }
 
@@ -114,6 +115,12 @@
     flex-direction: column-reverse;
     /* Coloca los enlaces en una columna */
     gap: 5px;
+
+  }
+
+  .privSpan {
+    position: relative;
+    top: -12px;
   }
 
   .links a {
@@ -133,8 +140,8 @@
     text-align: justify;
   }
 
-  .textjUST{
-     text-align: justify;
+  .textjUST {
+    text-align: justify;
   }
 
   .social {
