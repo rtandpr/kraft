@@ -91,6 +91,10 @@ const Home = () => {
             className={styles.text2IMG}
           />
 
+         
+        <Footer></Footer>
+       
+
         </div>
 
 
@@ -99,9 +103,7 @@ const Home = () => {
 
 
 
-      <div className={styles.containerFooter} >
-        <Footer></Footer>
-      </div>
+
     </div>
   );
 }

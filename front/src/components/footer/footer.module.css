@@ -47,7 +47,7 @@
 }
 
 .promotion {
-  font-size: 12px;
+  font-size: 12px !important;
   color: #ffffff;
   margin: 10px 0;
   font-weight: 400;
