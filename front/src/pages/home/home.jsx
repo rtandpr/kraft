@@ -28,24 +28,24 @@ const Home = () => {
   }, []);
 
 
-  // useEffect(() => {
-  //   const sectionId = localStorage.getItem('scrollTo');
-  //   if (sectionId) {
-  //     const scrollTo = () => {
-  //       const element = document.getElementById(sectionId);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //       }
-  //       localStorage.removeItem('scrollTo'); // Limpiamos después de hacer scroll
-  //     };
+  useEffect(() => {
+    const sectionId = localStorage.getItem('scrollTo');
+    if (sectionId) {
+      const scrollTo = () => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        localStorage.removeItem('scrollTo'); // Limpiamos después de hacer scroll
+      };
 
-  //     // Esperamos un poco para asegurar que el DOM ya está montado
-  //     setTimeout(scrollTo, 300);
-  //   }
+      // Esperamos un poco para asegurar que el DOM ya está montado
+      setTimeout(scrollTo, 300);
+    }
 
-  //   document.title = '7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = '7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
 
-  // }, []);
+  }, []);
 
   return (
     <div className={styles.homeFondo}>

@@ -26,6 +26,7 @@
     /* background-repeat: no-repeat; */
     /* background-attachment: fixed; */
     z-index: -1; 
+    
 }
 
 
@@ -138,6 +139,8 @@
         background-position: center center;  
         background-repeat: no-repeat; 
         background-image: url("../../assets2/fondo_mobile.jpg"); 
+        border: 1px solid black;
+        padding-bottom: 100px;
     }
 
 
