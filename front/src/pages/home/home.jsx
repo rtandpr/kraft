@@ -64,23 +64,16 @@ const Home = () => {
 
         </div>
 
-        <div className={styles.containerLogo}>
-
+        <div className={styles.containerLogo} >
           <img
             data-aos="zoom-in"
             src={titularIMG}
             className={styles.titularIMG}
           />
-          
-
-
-
-
-
         </div>
 
 
-        <div className={styles.contentText}>
+        <div className={styles.contentText}  >
 
           <p>Sube tu recibo de compra con productos participantes</p>
 
@@ -89,7 +82,7 @@ const Home = () => {
             data-aos="zoom-in"
             src={button}
             className={styles.buttonLog}
-            style={{ cursor: "pointer" }}
+            
           />
           {/* </Link> */}
           <img
@@ -106,7 +99,7 @@ const Home = () => {
 
 
 
-      <div className={styles.containerFooter}>
+      <div className={styles.containerFooter} >
         <Footer></Footer>
       </div>
     </div>

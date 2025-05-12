@@ -103,9 +103,9 @@ const Navbar = () => {
         {/* <a onClick={() => scrollToSection('mec')} style={{ cursor: 'pointer' }}>Mecánica</a>
       <a onClick={() => scrollToSection('premios')} style={{ cursor: 'pointer' }}>Premios</a> */}
 
-        <Link to="/ganadores" style={{ textDecoration: 'none' }}><b>Ganadores</b></Link>
+        <Link to="/ganadores" style={{ textDecoration: 'none' }}>Ganadores</Link>
         <Link to="/perfil" style={{ textDecoration: 'none' }}>Mi perfil</Link>
-        <Link to="/registro" style={{ textDecoration: 'none' }}>Registrate</Link>
+        <Link to="/registro" style={{ textDecoration: 'none' }}>Regístrate</Link>
 
         {/* <button className={`${styles.btn} ${styles["btn-login"]}`} onClick={() => redirect("/inicioSesion")}>
            {userData?.id ? "Mi perfil" : "Iniciar Sesión"} 

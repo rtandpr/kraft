@@ -110,10 +110,11 @@
   /* Convierte el texto a mayúsculas */
   letter-spacing: 2px;
   /* Agrega espacio entre las letras */
-  font-size:30px;
+  font-size:34px;
   -webkit-text-fill-color: #21459a; /* Azul más grueso */
-  -webkit-text-stroke: .7px #fff; /* Borde blanco más fino */
+ text-shadow: 3px 3px 0 rgb(255, 255, 255), -3px 3px 0 rgb(255, 255, 255), -3px -3px 0 rgb(255, 255, 255), 3px -3px 0 rgb(255, 255, 255);
 }
+
 
 .navbar-links a:hover {
   text-decoration: underline;

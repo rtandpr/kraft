@@ -84,10 +84,11 @@
     margin-top: 0px;
     color: #296eaf !important;
     z-index: 20;
+    cursor: pointer !important;
 }
 
 .buttonLog:hover{
-    cursor: zoom-out;
+    cursor: pointer;
 }
 
 .text2IMG{
