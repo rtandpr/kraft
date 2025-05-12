@@ -136,9 +136,11 @@
 
     .homeBackground{
         height: 130vh; 
-        background-position: center center;  
-        background-repeat: no-repeat; 
+        background-position: center 70%;  
+      
         background-image: url("../../assets2/fondo_mobile.jpg"); 
+
+    /* background-attachment: fixed; */
        
         padding-bottom: 60px;
     }
