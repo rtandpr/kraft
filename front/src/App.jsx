@@ -30,16 +30,16 @@ function App() {
      <BrowserRouter>     
         <Routes>
           <Route path="/" element={<PageEntrance><Home/></PageEntrance>} />
-          <Route path="/Tyc" element={<PageEntrance><TyC/></PageEntrance> } />
-          <Route path="/inicioSesion" element={<PageEntrance><InicioSesion/></PageEntrance>} />
+          {/* <Route path="/Tyc" element={<PageEntrance><TyC/></PageEntrance> } />
+          <Route path="/inicioSesion" element={<PageEntrance><InicioSesion/></PageEntrance>} /> */}
           <Route path="/Registro" element={<PageEntrance><Registro/></PageEntrance>} />
-          <Route path="/miPerfil" element={<PageEntrance><MiPerfil/></PageEntrance>} />
+          {/* <Route path="/miPerfil" element={<PageEntrance><MiPerfil/></PageEntrance>} />
           <Route path="/SubirVoucher" element={<PageEntrance><SubirVoucher/></PageEntrance>} /> 
           <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />
           <Route path="/Priv" element={<PageEntrance><Priv/></PageEntrance>} />
           <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
           <Route path="admin/infoUsers/total" element={<Infouser/>} />
-          <Route path="/pass/:id" element={<RecuperarPass />} />
+          <Route path="/pass/:id" element={<RecuperarPass />} /> */}
          </Routes>
       </BrowserRouter>
     
