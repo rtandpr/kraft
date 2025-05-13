@@ -39,6 +39,7 @@
   width: 55%;
   position: relative;
   right: 30px;
+  top: 100px;
 }
 
 .titularIMG {
@@ -117,7 +118,7 @@
   font-size: 16px;
   margin: 10px;
   margin-top: 40px;
-    font-family: 'Neulis', sans-serif;
+  font-family: 'Neulis', sans-serif;
 }
 
 .divChek input {
@@ -170,10 +171,10 @@
 
 @media (max-width: 1200px) {
 
-  
-.loginForm {
-  padding-left: 0px;
-}
+
+  .loginForm {
+    padding-left: 0px;
+  }
 
 
 }
@@ -184,15 +185,16 @@
 
   .container {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-            background-position: center center;  
-  /* Usa 'sans-serif' como respaldo */
-}
+    background-position: center center;
+     height: 270vh;  
+    /* Usa 'sans-serif' como respaldo */
+  }
 
 
   .loginForm {
     margin-top: 0px;
   }
-  
+
 
 
   .container {
@@ -221,6 +223,7 @@
     width: 65%;
     position: relative;
     margin-top: -100px;
+      right: 0px;
   }
 
   .titularIMG {
@@ -259,7 +262,8 @@
   .divChek {
     margin: 0 !important;
     position: relative;
-    right: 27px;
+    right: 0px;
+    /* margin-left: 30px; */
   }
 
   .brResp {
@@ -267,7 +271,7 @@
   }
 
   .footer {
-    margin-top: -10px;
+    margin-top: 50px;
   }
 
   .logoImg {
