@@ -62,7 +62,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -100px;
+  top: -30px;
   padding-left: 100px;
 }
 
@@ -186,7 +186,8 @@
   .container {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     background-position: center center;
-     height: 235vh;  
+    height: 235vh; 
+    border-bottom: 1px solid #0a83b7; 
     /* Usa 'sans-serif' como respaldo */
   }
 
