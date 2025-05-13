@@ -37,7 +37,9 @@
 .titleImg2 {
   width: 55%;
   position: relative;
-  right: 20px;
+  right: 30px;
+  
+    border: 1px solid black;
 }
 
 .titularIMG {
