@@ -24,7 +24,9 @@
   z-index: -1;
   padding-top: 180px;
   font-family: 'Neulis', sans-serif;
-  border: 1px solid transparent;
+
+  border-bottom: 1px solid #0a83b7; 
+  border-top: 1px solid #fdd315;
   /* Usa 'sans-serif' como respaldo */
 }
 
