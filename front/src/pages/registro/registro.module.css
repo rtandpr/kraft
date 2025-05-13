@@ -163,7 +163,7 @@
 
 .logoImg {
   width: 20%;
-  margin-top: 40px;
+  margin-top: -10px;
 }
 
 @media (max-width: 1200px) {
