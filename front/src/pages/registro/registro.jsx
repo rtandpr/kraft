@@ -376,7 +376,7 @@ const Registro = () => {
 
 
 
-          <h1 className={styles.title} style={{ marginTop: "20px" }}>
+          <h1 className={styles.title} style={{ marginTop: "70px" }}>
             <img
               src={botonLog}
               alt="iniImg"
