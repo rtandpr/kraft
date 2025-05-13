@@ -227,7 +227,7 @@ const Registro = () => {
       newErrors.confirmarContraseña = "Las contraseñas no coinciden.";
     }
 
-    if (!formData.aceptaPrivacidad) newErrors.aceptaPrivacidad = "Debes aceptar el aviso de privacidad.";
+    // if (!formData.aceptaPrivacidad) newErrors.aceptaPrivacidad = "Debes aceptar el aviso de privacidad.";
     if (!formData.aceptaTerminos) newErrors.aceptaTerminos = "Debes aceptar los términos y condiciones.";
 
     setErrors(newErrors);
@@ -254,15 +254,21 @@ const Registro = () => {
 
     // Validar campos obligatorios y checkboxes obligatorios
     const camposCompletos = Nombres && Apellidos && Correo && Teléfono && Contraseña && confirmarContraseña;
-    const checkboxesValidos = aceptaPrivacidad && aceptaTerminos && aceptaInfo;
+
+    console.log("camposCompletos", camposCompletos);
+    
+    const checkboxesValidos =  aceptaTerminos
+
+    console.log("checkboxesValidos", checkboxesValidos);
+    
 
     // Validar correo básico
-    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
+    // const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
 
     // Contraseñas coinciden
     const contrasenasValidas = Contraseña === confirmarContraseña;
 
-    return camposCompletos && checkboxesValidos && correoValido && contrasenasValidas;
+    return camposCompletos && checkboxesValidos  && contrasenasValidas;
   };
 
 
