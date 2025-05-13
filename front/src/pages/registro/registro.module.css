@@ -59,7 +59,8 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
+  position: relative;
+  top: -100px;
   padding-left: 100px;
 }
 
@@ -181,7 +182,8 @@
 @media (max-width: 768px) {
 
   .container {
-  background-image: url("../../assets2/fondo2Reg.jpg");
+    background-image: url("../../assets2/fondo2mob.jpg");
+            background-position: center center;  
   /* Usa 'sans-serif' como respaldo */
 }
 
@@ -210,7 +212,7 @@
   .titleImg {
     width: 60%;
     top: 10px;
-    margin-top: 0px !important;
+    margin-top: -28px !important;
     left: 20px;
   }
 
@@ -223,7 +225,7 @@
   .titularIMG {
     width: 70%;
     position: relative;
-    margin-top: -20px;
+    top: -60px;
   }
 
   .p {
