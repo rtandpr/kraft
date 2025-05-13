@@ -86,7 +86,7 @@
         padding-right: 60px;
         max-width: 190px !important;
         min-width: 190px !important;
-        border: 1px solid black !important;;
+        /* border: 1px solid black !important;; */
     }
 
     .iconInput {
