@@ -256,11 +256,11 @@ const Registro = () => {
     const camposCompletos = Nombres && Apellidos && Correo && Teléfono && Contraseña && confirmarContraseña;
 
     console.log("camposCompletos", camposCompletos);
-    
-    const checkboxesValidos =  aceptaTerminos
+
+    const checkboxesValidos = aceptaTerminos
 
     console.log("checkboxesValidos", checkboxesValidos);
-    
+
 
     // Validar correo básico
     // const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
@@ -268,7 +268,7 @@ const Registro = () => {
     // Contraseñas coinciden
     const contrasenasValidas = Contraseña === confirmarContraseña;
 
-    return camposCompletos && checkboxesValidos  && contrasenasValidas;
+    return camposCompletos && checkboxesValidos && contrasenasValidas;
   };
 
 
@@ -277,10 +277,12 @@ const Registro = () => {
       <Navbar></Navbar>
       <div className={styles.container}>
         <h1 className={styles.title}>
-          <img
-            src={LogoImg}
-            className={styles.titleImg}
-          />
+          <Link to={"/"}>
+            <img
+              src={LogoImg}
+              className={styles.titleImg}
+            />
+          </Link>
         </h1>
 
         <h1 className={styles.title}>
@@ -376,9 +378,9 @@ const Registro = () => {
                 checked={formData.aceptaTerminos}
                 onChange={handleChange}
               />
-              <label for="AceptoTérminosycondiciones">He leído y acepto los 
-                <a to="/tyc" style={{fontSize:"16px", textDecoration:"underline" ,color:"#2b469c"}}> términos y condiciones. </a>
-         </label>
+              <label for="AceptoTérminosycondiciones">He leído y acepto los
+                <a to="/tyc" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a>
+              </label>
             </div>
           </div>
 

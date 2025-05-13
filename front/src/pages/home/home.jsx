@@ -53,12 +53,13 @@ const Home = () => {
       <div className={styles.homeBackground}>
 
         <div className={styles.containerLogo} style={{ marginTop: "-40px" }}>
+         
           <img
             src={LogoImg}
             className={styles.LogoImg}
             // data-aos="fade-right"
           />
-
+          
 
 
 
