@@ -376,7 +376,9 @@ const Registro = () => {
                 checked={formData.aceptaTerminos}
                 onChange={handleChange}
               />
-              <label for="AceptoTérminosycondiciones">He leído y acepto los términos y condiciones.</label>
+              <label for="AceptoTérminosycondiciones">He leído y acepto los 
+                <a to="/tyc" style={{fontSize:"16px", textDecoration:"underline" ,color:"#2b469c"}}> términos y condiciones. </a>
+         </label>
             </div>
           </div>
 
