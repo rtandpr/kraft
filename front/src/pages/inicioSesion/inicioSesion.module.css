@@ -258,6 +258,9 @@ segundos estilos para el footer */
     position: none;
     bottom: none;
     width: none;
+    margin-top: 20px;
+    position: relative;
+    top: 20px;
   }
 
 
