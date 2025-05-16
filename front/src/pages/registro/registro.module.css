@@ -192,7 +192,7 @@
   .container {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     background-position: center center;
-    height: 235vh; 
+    height: 260vh; 
     border-bottom: 1px solid #0a83b7; 
     /* Usa 'sans-serif' como respaldo */
   }
@@ -290,5 +290,19 @@
   .links a {
     font-size: 18px;
   }
+
+
+  .footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+
+  position: none;
+  bottom: none;
+  width: none;
+}
 
 }
