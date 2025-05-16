@@ -4,7 +4,7 @@ import styles from "./miperfil.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/tit3.png"
-import botonLog from "../../assets/UpVouch.png"
+import botonLog from "../../assets2/bot_cargar.png"
 import productosImg from "../../assets/productos.png";
 import Swal from "sweetalert2";
 import LogoImg from "../../assets2/logo.png";
@@ -169,7 +169,7 @@ const MiPerfil = () => {
             </div>
 
             <h1 className={styles.title2} style={{ cursor: "pointer" }}>
-              <img src={botonLog} alt="iniImg" className={styles.titleImg2} onClick={() => redirect("/SubirVoucher")} />
+              <img src={botonLog} alt="iniImg" className={styles.btnSend} onClick={() => redirect("/SubirVoucher")} />
             </h1>
           </div>
 

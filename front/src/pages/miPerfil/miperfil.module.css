@@ -27,17 +27,19 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  color: #2b469c;
 }
 
 
 
 .p {
   margin-top: 40px;
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   color: white;
-  font-size: 34px;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -60,11 +62,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px;
   margin-top: 40px;
 }
@@ -104,29 +106,29 @@
 }
 
 .datosUser h1 {
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
-  font-size: 60px;
+  font-size: 40px;
   position: relative;
   top: -30px;
 }
 
 .datosUser .p1 {
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
-  font-size: 22px;
+  font-size: 18px;
   position: relative;
   top: -60px;
 }
 
 .p2 {
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
-  font-size: 20px;
-  color: #fe7914;
+  font-size: 18px;
+  color: #de2b28;
   cursor: pointer;
   position: relative;
   top: -10px;
@@ -137,7 +139,7 @@
   height: auto;
   padding: 20px;
   padding-left: 40px;
-  font-family: 'Omnes', sans-serif;
+  font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
 }
@@ -157,14 +159,13 @@
 }
 
 .datosImg h1 {
-  font-size: 60px;
+  font-size: 45px;
   position: relative;
   top: -55px;
 }
 
 .datosImg p {
-  font-size: 55px;
-  font-size: 22px;
+  font-size: 18px;
   position: relative;
   top: -90px;
 }
@@ -210,6 +211,7 @@
   top: 0px;
 }
 
+
 .titularIMG {
   width: 45%;
   position: relative;
@@ -220,6 +222,11 @@
 .titleImg {
   width: 25%;
   margin-top: -50px;
+}
+
+
+.btnSend{
+  width: 100%;
 }
 
 @media (min-width: 1600px) {
@@ -354,10 +361,10 @@
 
 
   .datosUser h1 {
-    font-family: 'Omnes', sans-serif;
+    font-family: 'Neulis', sans-serif;
     /* Usa 'sans-serif' como respaldo */
     letter-spacing: 1.4px;
-    font-size: 60px;
+    font-size: 40px;
     position: relative;
     top: -30px;
     text-align: center;
@@ -365,10 +372,10 @@
   }
 
   .datosUser .p1 {
-    font-family: 'Omnes', sans-serif;
+    font-family: 'Neulis', sans-serif;
     /* Usa 'sans-serif' como respaldo */
     letter-spacing: 1.4px;
-    font-size: 22px;
+    font-size: 16px;
     position: relative;
     top: -60px;
     text-align: center;
@@ -376,10 +383,10 @@
   }
 
   .datosUser .p2 {
-    font-family: 'Omnes', sans-serif;
+    font-family: 'Neulis', sans-serif;
     /* Usa 'sans-serif' como respaldo */
     letter-spacing: 1.4px;
-    font-size: 22px;
+    font-size: 16px;
     position: relative;
     top: -30px;
     text-align: center;
@@ -406,7 +413,7 @@
   }
 
   .datosImg h1 {
-    font-size: 50px;
+    font-size: 40px;
     position: relative;
     top: -55px;
     padding-right: 0;
@@ -414,8 +421,8 @@
   }
 
   .datosImg p {
-    font-size: 55px;
-    font-size: 22px;
+    font-size: 35px;
+    font-size: 18px;
     position: relative;
     top: -90px;
   }
