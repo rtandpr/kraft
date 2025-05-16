@@ -18,6 +18,7 @@
 .Fondo {
   background-image: url("../../assets2/fondo2.jpg");
   background-size:cover ;
+  height: 195vh;
 }
 
 .container {
@@ -49,6 +50,9 @@
   margin-top: -170px;
   padding-top: 100px;
   /*   background-color: white; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 
@@ -372,6 +376,7 @@ segundos estilos para el footer */
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     border: 1px solid transparent;
+    height: 230vh;
   }
 
 
