@@ -77,7 +77,7 @@
 .formGroup {
   width: 100%;
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -102,7 +102,7 @@
 
 
 .containerFooter {
-  margin-top:100px;
+  margin-top: 100px;
   padding-top: 100px;
 
 
@@ -141,6 +141,47 @@
 }
 
 
+/* 
+segundos estilos para el footer */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+  /* 
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: -10px;
+}
+
+
 @media (max-width: 768px) {
 
 
@@ -158,8 +199,8 @@
   }
 
   .formGroup {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 
 
   .title {
@@ -198,10 +239,34 @@
 
   }
 
-  .containerFooter{
+  .containerFooter {
     position: relative;
-    top: 0px;
+    top: -100px;
   }
 
 
+  /* footer 2 */
+
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    font-family: 'Neulis', sans-serif;
+    margin-top: 0px;
+
+
+    position: none;
+    bottom: none;
+    width: none;
+  }
+
+
+  .links {
+    flex-direction: column;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 10px;
+  }
 }

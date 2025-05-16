@@ -16,7 +16,8 @@ import titularIMG from "../../assets2/titular.png";
 import iconoSes from "../../assets/ico_nombre.png";
 import inconoPass from "../../assets/ico_contra.png";
 import inconoPassDer from "../../assets/ico_ojo.png";
-
+import kraft_heinz from "../../assets2/kraft_heinz.png";
+import LogosRedes from "../../components/logosRedes/LogosRedes";
 
 
 
@@ -191,7 +192,7 @@ const InicioSesion = () => {
   return (
     <div className={styles.Fondo}>
       <Navbar></Navbar>
-      <div style={{ height: "60px"}} className='divSpac'></div>
+      <div style={{ height: "60px" }} className='divSpac'></div>
       <div className={styles.container}>
         <h1 className={styles.title}>
           <Link to={"/"}>
@@ -223,7 +224,7 @@ const InicioSesion = () => {
             //   borderErr={touchCorreo && formData.Correo == ""}
             //   msjErr={"El correo es obligatorio."}
             />
-            <div style={{width:"50px"}}></div>
+            <div style={{ width: "50px" }}></div>
 
             <Input
               placeholder="Contraseña"
@@ -283,7 +284,20 @@ const InicioSesion = () => {
 
       </div>
       <div className={styles.containerFooter}>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
+        <footer className={styles.footer}>
+          <div className={styles.links}>
+            <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+            <br className={styles.brResp} />
+            <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
+          </div>
+          <div className={styles.social}>
+            <LogosRedes></LogosRedes>
+          </div>
+          <div className={styles.logo}>
+            <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
+          </div>
+        </footer>
       </div>
 
     </div>
