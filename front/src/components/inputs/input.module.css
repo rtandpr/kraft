@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Neulis';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
+}
+
+
+@font-face {
+  font-family: 'Neulis2';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Regular.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
+}
+
 .content {
     max-width: 100%;
     letter-spacing: 1.4px;
@@ -9,25 +26,28 @@
     max-width: 430px;
     margin-top: 40px;
     text-align: left;
+    padding-left: 60px;
 }
 
 .label {
     margin-left: 5px;
     color: #2b469c;
+    font-family: "Neulis", sans-serif;
 }
 
 .inputField {
     background-color: white;
     border-radius: 10px;
     padding-top: 20px;
-    padding-left: 120px;
+    padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 20px;
     /* border: 1px solid white; */
     color: rgb(0, 0, 0);
-    max-width: 300px;
+    max-width: 350px;
     font-size: 17px;
     margin-top: 10px;
+   
 }
 
 
@@ -82,7 +102,7 @@
     }
 
     .inputField {
-        padding-left: 80px;
+        padding-left: 60px;
         padding-right: 60px;
         max-width: 190px !important;
         min-width: 190px !important;

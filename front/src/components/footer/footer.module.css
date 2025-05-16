@@ -16,7 +16,7 @@
 
 
 .footer {
-  background-color: #d09b5c;
+  background-color: transparent;
   padding: 20px;
   text-align: center;
   font-size: 10px;
@@ -96,7 +96,7 @@
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer {
-    background-color: #d09b5c;
+    /* background-color: #d09b5c; */
     padding: 20px;
     text-align: center;
     font-size: 10px;
@@ -107,7 +107,7 @@
     /* Usa 'sans-serif' como respaldo */
     max-width: 95%;
     position: relative;
-    top: -30px;
+    top: 0px;
 
   }
 

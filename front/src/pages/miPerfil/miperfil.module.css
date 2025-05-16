@@ -1,48 +1,40 @@
 @font-face {
-    font-family: 'Omnes';
-    src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype'); /* Cambié 'truetype' a 'opentype' si es necesario */
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-
-.container{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-family: 'Neulis';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #32ab56;
-    margin-bottom: 20px;
-    text-align: center;
-  }
 
-.title2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #32ab56;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+@font-face {
+  font-family: 'Neulis2';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Regular.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
+}
 
-.titleImg{
-    width:  90%;
-  }
+.Fondo {
+  background-image: url("../../assets2/fondo2.jpg");
+}
 
-.titleImg2{
-    width: 90%;
-  } 
+.container {
+
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 
-.p{
+
+.p {
   margin-top: 40px;
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   color: white;
   font-size: 34px;
@@ -50,44 +42,26 @@
 }
 
 
-.containerFooter{
+.containerFooter {
   margin-top: -170px;
   padding-top: 100px;
-  background-color: white;
+  /*   background-color: white; */
 }
 
-.ballonder2{
-  position: absolute;
-  top: 13%;
-  right: 10%;
-  width: 10%;
-}
 
-.ballonder{
-  position: absolute;
-  bottom: 43%;
-  left: 10%;
-  width: 8%;
-}
 
-.ballon1zq{
-  position: absolute;
-  bottom: 16%;
-  right: 10%;
-  width: 8%;
-}
-
-.contentInputsCheck{
+.contentInputsCheck {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.divChek{
+.divChek {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   color: white;
   font-size: 20px;
@@ -95,57 +69,61 @@
   margin-top: 40px;
 }
 
-.divChek input{
+.divChek input {
   margin-right: 10px;
 }
 
-.contentUserData{
-    width: 1100px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 200px;
+.contentUserData {
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 200px;
 }
 
-.datosUserDiv{
-    width: 30%;
-    height: auto;
-    margin: 30px;
+.datosUserDiv {
+  width: 30%;
+  height: auto;
+  margin: 30px;
 }
 
-.datosUser{
-    background-color: #ffe631;
-    border-radius: 50px;
-    padding: 20px;
-    padding-top: 20px;
-    padding-left: 55px;
-    padding-right: 0px;
-    height: 200px; 
-    width: 100%;
-    text-align: left;
-    position: relative;
-    top: -5px;
-
+.datosUser {
+  /* background-color: #ffe631; */
+  border-radius: 50px;
+  padding: 20px;
+  padding-top: 20px;
+  padding-left: 55px;
+  padding-right: 0px;
+  height: 200px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  top: -5px;
+  background-color: white;
+  border: 1px solid rgb(119, 110, 110);
 }
 
-.datosUser h1{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+.datosUser h1 {
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   font-size: 60px;
   position: relative;
   top: -30px;
 }
 
-.datosUser .p1{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+.datosUser .p1 {
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   font-size: 22px;
   position: relative;
   top: -60px;
 }
 
-.p2{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+.p2 {
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   font-size: 20px;
   color: #fe7914;
@@ -154,18 +132,17 @@
   top: -10px;
 }
 
-.datosVucherDiv{
-    width: 70%;
-    height: auto;
-    padding: 20px;
-    padding-left: 40px;
-    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-    letter-spacing: 1.4px;
-
-    
+.datosVucherDiv {
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  padding-left: 40px;
+  font-family: 'Omnes', sans-serif;
+  /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
 }
 
-.datosImg{
+.datosImg {
   height: 100%;
   width: 85%;
   background-color: white;
@@ -176,15 +153,16 @@
   padding-left: 55px;
   position: relative;
   top: 5px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
-.datosImg h1{
+.datosImg h1 {
   font-size: 60px;
   position: relative;
   top: -55px;
 }
 
-.datosImg p{
+.datosImg p {
   font-size: 55px;
   font-size: 22px;
   position: relative;
@@ -192,7 +170,7 @@
 }
 
 
-.containImgs{
+.containImgs {
   width: 90%;
   max-width: 600px;
   overflow-x: auto;
@@ -208,22 +186,28 @@
 }
 
 
-.productosImg{
+.productosImg {
   position: relative;
   right: 30px;
-  top: -30px; 
+  top: -30px;
   width: 59.8%;
 }
 
-@media (min-width: 1600px) { 
+.titleImg2 {
+  position: relative;
+  left: 10px;
+  width: 100%;
+}
 
-  .productosImg{
+@media (min-width: 1600px) {
+
+  .productosImg {
     position: relative;
     right: 30px;
-    top: -30px; 
+    top: -30px;
     width: 70%;
   }
-  
+
 
 }
 
@@ -231,22 +215,10 @@
 @media (max-width: 1101px) {
 
 
-  .ballonder2{
-   display: none;
-  }
-  
-  .ballonder{
-    display: none;
-  }
-  
-  .ballon1zq{
-    display: none;
-  }
-
-  .productosImg{
-     position: relative;
-     right: 30px;
-     width: 200px;
+  .productosImg {
+    position: relative;
+    right: 30px;
+    width: 200px;
   }
 
   .title {
@@ -254,64 +226,68 @@
     text-align: center;
   }
 
-  .titleImg{
-    width: 30%;
-  } 
+  .titleImg {
+    width: 60%;
+  }
 
-  .titleImg2{
-    width: 30%;
-  } 
+  .titleImg2 {
+    width: 90%;
+    position: relative;
+    left: -7px;
+    /* right: 0px;
+    left: 0px; */
+  }
 
-  .p{
+  .p {
     padding: 20px;
   }
-  
-  .contentUserData{
+
+  .contentUserData {
     width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 0;
-}
+  }
 
 
-.datosUserDiv{
-  width: 90%;
-  height: auto;
-  margin: 30px;
-}
+  .datosUserDiv {
+    width: 90%;
+    height: auto;
+    margin: 30px;
+  }
 
-.datosUser{
+  .datosUser {
 
-  width: 80%;
-  text-align: left;
+    width: 80%;
+    text-align: left;
 
-}
+  }
 
-/* .titleImg{
+  /* .titleImg{
   width:  30%;
 } */
 
-.title {
-  text-align: center;
-  padding-left: 0px;
-  margin-top: 0px;
-}
+  .title {
+    text-align: center;
+    padding-left: 0px;
+    margin-top: 0px;
+  }
 
-/* .title2{
+  /* .title2{
   max-width:100%;
 } */
 
 
-.contentUserData{
-  position: relative;
-  right: 20px;
+  .contentUserData {
+    position: relative;
+    right: 20px;
 
-}
+  }
 
-.datosImg h1{
-  margin-bottom: 80px;
-}
+  .datosImg h1 {
+    margin-bottom: 80px;
+  }
 }
 
 
@@ -319,137 +295,134 @@
 @media (max-width: 768px) {
 
 
+  .Fondo {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    border: 1px solid transparent;
+  }
 
 
-  .titleImg{
-    width: 55%;
-  } 
-
-  .titleImg2{
-    width: 90%;
-    position: relative;
-    right: 10px;
-  } 
-
-
-  .productosImg{
+  .productosImg {
     /* position: relative;
     right: 90px;
     width: 290px;
     top: -80px; */
     width: 75%;
     top: -250px;
- }
- .contentUserData{
-  position: relative;
-  right: 5px;
+  }
 
-}
+  .contentUserData {
+    position: relative;
+    right: 5px;
 
-.datosVucherDiv{
-  width: 72.5%;
-  position: relative;
-  right: 3px;
-  
-}
+  }
 
+  .datosVucherDiv {
+    width: 72.5%;
+    position: relative;
+    right: 3px;
 
-.datosUser {
-  position: relative;
-  right: 5px;
-}
+  }
 
 
-.datosUser h1{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-  letter-spacing: 1.4px;
-  font-size: 60px;
-  position: relative;
-  top: -30px;
- text-align: center;
- padding-right: 65px;
-}
-
-.datosUser .p1{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-  letter-spacing: 1.4px;
-  font-size: 22px;
-  position: relative;
-  top: -60px;
-  text-align: center;
-  padding-right: 65px;
-}
-
-.datosUser .p2{
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-  letter-spacing: 1.4px;
-  font-size: 22px;
-  position: relative;
-  top: -30px;
-  text-align: center;
-  padding-right: 65px;
-}
+  .datosUser {
+    position: relative;
+    right: 5px;
+  }
 
 
+  .datosUser h1 {
+    font-family: 'Omnes', sans-serif;
+    /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+    font-size: 60px;
+    position: relative;
+    top: -30px;
+    text-align: center;
+    padding-right: 65px;
+  }
+
+  .datosUser .p1 {
+    font-family: 'Omnes', sans-serif;
+    /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+    font-size: 22px;
+    position: relative;
+    top: -60px;
+    text-align: center;
+    padding-right: 65px;
+  }
+
+  .datosUser .p2 {
+    font-family: 'Omnes', sans-serif;
+    /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+    font-size: 22px;
+    position: relative;
+    top: -30px;
+    text-align: center;
+    padding-right: 65px;
+  }
 
 
-.datosImg{
-  height: 100%;
-  width: 85%;
-  background-color: white;
-  border-radius: 50px;
-  text-align: left;
-  padding: 30px;
-  padding-top: 45px;
-  padding-left: 45px;
-  position: relative;
-  top: 5px;
-  text-align: center;
-  position: relative;
-  top: -10px;
-}
-
-.datosImg h1{
-  font-size: 50px;
-  position: relative;
-  top: -55px;
-  padding-right: 0;
-  text-align: center;
-}
-
-.datosImg p{
-  font-size: 55px;
-  font-size: 22px;
-  position: relative;
-  top: -90px;
-}
 
 
-.containImgs{
-  width: 90%;
-  max-width: 600px;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  position: relative;
-  top: -20px;
-  right: 6px;
-  height: 200px;
-}
+  .datosImg {
+    height: 100%;
+    width: 85%;
+    background-color: white;
+    border-radius: 50px;
+    text-align: left;
+    padding: 30px;
+    padding-top: 45px;
+    padding-left: 45px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+  }
 
-.container{
-  height: 1750px;
+  .datosImg h1 {
+    font-size: 50px;
+    position: relative;
+    top: -55px;
+    padding-right: 0;
+    text-align: center;
+  }
 
-}
+  .datosImg p {
+    font-size: 55px;
+    font-size: 22px;
+    position: relative;
+    top: -90px;
+  }
 
-.containerFooter{
-  margin-top: -44vh;
-  padding-top: 120px;
-  background-color: white;
-}
+
+  .containImgs {
+    width: 90%;
+    max-width: 600px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    top: -20px;
+    right: 6px;
+    height: 200px;
+  }
+
+  .container {
+    height: 1950px;
+    margin-top: -100px;
+  }
+
+  .containerFooter {
+    margin-top: -40vh;
+    padding-top: 120px;
+    /* background-color: white; */
+  }
 
 }

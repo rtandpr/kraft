@@ -5,13 +5,10 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/tit5.png";
 import botonLog from "../../assets/boton_cargar.png";
-import productosImg from "../../assets/productos.png";
 import espacio_stv from "../../assets/espacio_stv.png";
-import ballonder2 from "../../assets/balloon_der2.png";
-import ballonder from "../../assets/balloon_der.png";
-import ballon1zq from "../../assets/balloon_izq.png";
 import Swal from "sweetalert2";
 import usePageTracking from "../../hooks/useGa";
+import LogoImg from "../../assets2/logo.png";
 
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
@@ -108,9 +105,20 @@ const SubirVoucher = () => {
     <div className={styles.Fondo}>
       <Navbar />
 
-      <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
+      <div style={{height:"50px"}} className='divSpac'></div>
 
       <div className={styles.container}>
+
+        <h1 className={styles.title}>
+          <Link to={"/"}>
+            <img
+              src={LogoImg}
+              className={styles.LogoImg}
+            />
+          </Link>
+        </h1>
+
+
         <h1 className={styles.title}>
           <img src={iniImg} alt="iniImg" className={styles.titleImg} />
         </h1>
@@ -161,20 +169,12 @@ const SubirVoucher = () => {
           )}
         </form>
 
-        <div>
-          <h1 className={styles.title} style={{ marginTop: "40px" }}>
-            <img src={productosImg} className={styles.productosImg} />
-          </h1>
-        </div>
       </div>
 
       <div className={styles.containerFooter}>
         <Footer />
       </div>
 
-      <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
-      <img src={ballonder} alt="ballonder3" className={styles.ballonder} />
-      <img src={ballon1zq} alt="ballon1zq" className={styles.ballon1zq} />
     </div>
   );
 };

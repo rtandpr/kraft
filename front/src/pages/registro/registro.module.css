@@ -65,7 +65,6 @@
   align-items: center;
   position: relative;
   top: -30px;
-  padding-left: 100px;
 }
 
 .formGroup {
@@ -146,6 +145,12 @@
   padding: 30px 20px;
   font-family: 'Neulis', sans-serif;
   margin-top: 0px;
+
+
+  /* border: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
 }
 
 .links {

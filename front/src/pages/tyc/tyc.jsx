@@ -20,7 +20,7 @@ const TyC = () => {
 
   return (
     <div className={styles.tycBackground} id='tyc'>
-      <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
+      <div style={{height:"160px"}} className='divSpac'></div>
     <div className={styles.container}>
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
@@ -184,26 +184,9 @@ El Promotor y/o Administrador del Sorteo se reservan el derecho, sujeto a las re
     </div>
 
 
-    
-    <h1 className={styles.containImg} style={{marginTop:"-350px", backgroundColor:"#32ab56"}}  >
-        <img src={ProductosImg} alt="ProductosImg" className={styles.porductosImg} />
-     </h1>
+  
 
-
-     <h1 className={styles.containImg2}>
-        <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
-     </h1>
-
-     <h1 className={styles.containImg3}>
-        <img src={ballonder} alt="ballonder3" className={styles.ballonder} />
-     </h1>
-
-
-     <h1 className={styles.containImg4}>
-        <img src={ballon1zq} alt="ballon1zq" className={styles.ballon1zq} />
-     </h1>
-
-    <div className={styles.containerFooter} style={{marginTop:"-150px", backgroundColor:"white"}} >
+    <div className={styles.containerFooter} style={{marginTop:"-150px"}} >
       <div className={styles.margenFoter}></div>
       <Footer></Footer>     
     </div> 
