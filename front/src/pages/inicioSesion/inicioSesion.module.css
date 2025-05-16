@@ -104,8 +104,6 @@
 .containerFooter {
   margin-top:100px;
   padding-top: 100px;
-  border: 1px solid black;
-  
 
 
   /* position: absolute;
@@ -147,7 +145,7 @@
 
 
   .Fondo {
-    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    background-image: url("../../assets2/fondoMobileLog.jpg");
     background-size: cover;
   }
 
@@ -198,6 +196,11 @@
     position: relative;
 
 
+  }
+
+  .containerFooter{
+    position: relative;
+    top: 0px;
   }
 
 
