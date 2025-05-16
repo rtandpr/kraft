@@ -16,8 +16,9 @@ import usePageTracking from "../../hooks/useGa";
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
+import LogosRedes from "../../components/logosRedes/LogosRedes";
 
-
+import kraft_heinz from "../../assets2/kraft_heinz.png";
 
 const MiPerfil = () => {
   const [data, setData] = useState(false);
@@ -207,9 +208,23 @@ const MiPerfil = () => {
 
       </div>
       <div className={styles.containerFooter}>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
+        <footer className={styles.footer}>
+          <div className={styles.links}>
+            <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+            <br className={styles.brResp} />
+            <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
+          </div>
+          <div className={styles.social}>
+            <LogosRedes></LogosRedes>
+          </div>
+          <div className={styles.logo}>
+            <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
+          </div>
+        </footer>
       </div>
 
+ 
     </div>
   )
 }

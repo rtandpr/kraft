@@ -225,7 +225,53 @@
 
 .btnSend{
   width: 100%;
+  position: relative;
+  bottom: 10px;
 }
+
+
+
+/* 
+segundos estilos para el footer */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+  /* 
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: -10px;
+}
+
+
 
 @media (min-width: 1600px) {
 
@@ -468,6 +514,52 @@
   .titleImg {
     width: 75%;
     margin-top: 20px;
+  }
+
+
+    /* footer 2 */
+
+
+
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    font-family: 'Neulis', sans-serif;
+    margin-top: 0px;
+
+
+    position: none;
+    bottom: none;
+    width: none;
+    margin-top: 20px;
+    position: relative;
+    top:-30px;
+  }
+
+
+  .links {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Neulis2', sans-serif !important;
+    margin-top: 10px;
+  }
+
+  .brResp {
+    display: none;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 10px;
   }
 
 }
