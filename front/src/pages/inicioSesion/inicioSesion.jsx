@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import usePageTracking from "../../hooks/useGa";
 import Swal from "sweetalert2";
 import LogoImg from "../../assets2/logo.png";
+import titularIMG from "../../assets2/titular.png";
 
 //importamos iconos
 import iconoSes from "../../assets/ico_nombre.png";
@@ -192,20 +193,25 @@ const InicioSesion = () => {
       <Navbar></Navbar>
       <div style={{ height: "20px" }} className='divSpac'></div>
       <div className={styles.container}>
-
         <h1 className={styles.title}>
           <Link to={"/"}>
             <img
               src={LogoImg}
-              className={styles.LogoImg}
+              className={styles.titleImg}
             />
           </Link>
         </h1>
 
-
         <h1 className={styles.title}>
-          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
+          <img
+            src={titularIMG}
+            className={styles.titularIMG}
+          />
         </h1>
+
+        {/* <h1 className={styles.title}>
+          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
+        </h1> */}
 
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
