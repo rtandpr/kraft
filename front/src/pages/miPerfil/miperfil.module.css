@@ -17,6 +17,7 @@
 
 .Fondo {
   background-image: url("../../assets2/fondo2.jpg");
+  background-size:cover ;
 }
 
 .container {
