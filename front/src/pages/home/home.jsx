@@ -92,12 +92,14 @@ const Home = () => {
             className={styles.text2IMG}
           />
 
-         
-        <Footer></Footer>
+
+      
        
 
         </div>
-
+         <div className={styles.footerRes}>
+           <Footer></Footer>
+         </div>
 
 
       </div>

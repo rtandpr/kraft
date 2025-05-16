@@ -100,6 +100,13 @@
 }
 
 
+ .footerRes{
+        position: absolute;
+        bottom: 0;
+        border: 1px solid black;
+        width: 100%;
+    }
+
 @media (max-width: 1500px) {
 
 .contentText{
@@ -132,7 +139,7 @@
 @media (max-width: 950px) {
 
     .homeBackground{
-        height: 130vh; 
+        height: 140vh; 
         background-position: center center;  
       
         background-image: url("../../assets2/fondo_mobile.jpg"); 
@@ -199,6 +206,8 @@
         margin-top: -4vw;
         background-color: transparent;
     }
+
+
 
 
   }
