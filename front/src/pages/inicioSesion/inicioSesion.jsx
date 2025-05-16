@@ -191,7 +191,7 @@ const InicioSesion = () => {
   return (
     <div className={styles.Fondo}>
       <Navbar></Navbar>
-      <div style={{ height: "20px" }} className='divSpac'></div>
+      <div style={{ height: "60px"}} className='divSpac'></div>
       <div className={styles.container}>
         <h1 className={styles.title}>
           <Link to={"/"}>
