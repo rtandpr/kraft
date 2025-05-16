@@ -142,7 +142,7 @@
 .footer {
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 0px 0px;
   font-family: 'Neulis', sans-serif;
   margin-top: 0px;
 
@@ -192,7 +192,7 @@
   .container {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     background-position: center center;
-    height: 260vh; 
+    height: 240vh; 
     border-bottom: 1px solid #0a83b7; 
     /* Usa 'sans-serif' como respaldo */
   }
@@ -304,5 +304,19 @@
   bottom: none;
   width: none;
 }
+
+}
+
+
+@media (max-width: 376px) {
+
+  .container {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    background-position: center center;
+    height: 260vh; 
+    border-bottom: 1px solid #0a83b7; 
+    /* Usa 'sans-serif' como respaldo */
+  }
+
 
 }
