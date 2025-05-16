@@ -376,7 +376,7 @@ segundos estilos para el footer */
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     border: 1px solid transparent;
-    height: 230vh;
+    height: 270vh;
   }
 
 
@@ -565,6 +565,19 @@ segundos estilos para el footer */
   .logoImg {
     width: 50%;
     margin-top: 10px;
+  }
+
+}
+
+
+
+@media (max-width:377px) {
+
+
+  .Fondo {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    border: 1px solid transparent;
+    height: 300vh;
   }
 
 }
