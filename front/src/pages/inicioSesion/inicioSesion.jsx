@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/titSes.png"
 import Input from "../../components/inputs/input";
-import botonLog from "../../assets/boton.png"
+import botonLog from "../../assets2/botonLog2.png"
 import productosImg from "../../assets/productos.png";
 import { Link, useNavigate } from "react-router-dom";
 import usePageTracking from "../../hooks/useGa";
@@ -223,6 +223,7 @@ const InicioSesion = () => {
             //   borderErr={touchCorreo && formData.Correo == ""}
             //   msjErr={"El correo es obligatorio."}
             />
+            <div style={{width:"50px"}}></div>
 
             <Input
               placeholder="Contraseña"

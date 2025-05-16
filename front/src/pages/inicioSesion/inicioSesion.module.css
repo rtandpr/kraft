@@ -23,7 +23,7 @@
   font-style: bold;
 }
 
-.Fondo{
+.Fondo {
   background-image: url("../../assets2/fondo2.jpg");
   background-size: cover;
 }
@@ -77,9 +77,9 @@
 .formGroup {
   width: 100%;
   display: flex;
+    flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .a {
@@ -138,10 +138,10 @@
 @media (max-width: 768px) {
 
 
-.Fondo{
+  .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-  background-size: cover;
-}
+    background-size: cover;
+  }
 
 
   .productosImg {
@@ -150,6 +150,11 @@
     width: 75%;
     top: -50px;
   }
+
+  .formGroup {
+  flex-direction: column;
+}
+
 
   .title {
     width: 100%;
@@ -166,7 +171,7 @@
     width: 75%;
   }
 
-  .LogoImg{
+  .LogoImg {
     width: 60%;
     margin-top: -70px;
   }
@@ -177,9 +182,9 @@
     font-size: 15px;
   }
 
-.a {
-     font-size: 15px;
-}
+  .a {
+    font-size: 15px;
+  }
 
   .productosImg {
     position: relative;
