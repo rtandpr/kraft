@@ -159,7 +159,7 @@
 }
 
 .datosImg h1 {
-  font-size: 45px;
+  font-size: 35px;
   position: relative;
   top: -55px;
 }
@@ -167,7 +167,7 @@
 .datosImg p {
   font-size: 18px;
   position: relative;
-  top: -90px;
+  top: -80px;
 }
 
 
@@ -182,7 +182,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   position: relative;
-  top: -100px;
+  top: -60px;
   height: 200px;
 }
 
