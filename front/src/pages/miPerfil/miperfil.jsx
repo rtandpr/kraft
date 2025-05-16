@@ -8,6 +8,7 @@ import botonLog from "../../assets/UpVouch.png"
 import productosImg from "../../assets/productos.png";
 import Swal from "sweetalert2";
 import LogoImg from "../../assets2/logo.png";
+import titularIMG from "../../assets2/titular.png";
 
 import usePageTracking from "../../hooks/useGa";
 
@@ -146,8 +147,15 @@ const MiPerfil = () => {
         </h1>
 
         <h1 className={styles.title}>
-          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
+          <img
+            src={titularIMG}
+            className={styles.titularIMG}
+          />
         </h1>
+
+        {/* <h1 className={styles.title}>
+          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
+        </h1> */}
 
 
 
