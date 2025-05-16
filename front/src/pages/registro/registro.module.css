@@ -40,7 +40,7 @@
 .titleImg2 {
   width: 55%;
   position: relative;
-  right: 30px;
+  right: 0px;
   top: 0px;
 }
 
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: flex-start;
   /* Alinea los elementos hijos hacia la izquierda */
-  min-width: 995px;
+  min-width: 825px;
 }
 
 .divChek {
@@ -147,7 +147,6 @@
   margin-top: 0px;
 
 
-  border: 1px solid black;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -231,7 +230,7 @@
     width: 65%;
     position: relative;
     margin-top: -0px;
-      right: 0px;
+    right: 0px;
     top: 40px;
   }
 
