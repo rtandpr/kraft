@@ -266,7 +266,22 @@ segundos estilos para el footer */
 
   .links {
     flex-direction: column;
+    margin-bottom: 0px;
   }
+
+  .links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+  margin-top: 10px;
+}
+
+.brResp{
+  display: none;
+}
 
   .logoImg {
     width: 50%;
