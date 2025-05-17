@@ -16,8 +16,9 @@ const Footer = () => {
         <div className={styles.links}>
           <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
           <br className={styles.brResp} />
-          <Link to="https://www.kraftheinz.com/privacy-policy "><span className={styles.privSpan}>AVISO DE PRIVACIDAD</span></Link>
-        </div>
+            <a href="https://www.kraftheinz.com/privacy-policy" target="_blank">
+              AVISO DE PRIVACIDAD
+            </a>        </div>
         <div className={styles.textjUST}>
 
 

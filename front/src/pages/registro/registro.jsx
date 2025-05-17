@@ -406,7 +406,9 @@ const Registro = () => {
           <div className={styles.links}>
             <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
             <br className={styles.brResp} />
-            <Link to="https://www.kraftheinz.com/privacy-policy ">AVISO DE PRIVACIDAD</Link>
+            <a href="https://www.kraftheinz.com/privacy-policy" target="_blank">
+              AVISO DE PRIVACIDAD
+            </a>
           </div>
           <div className={styles.social}>
             <LogosRedes></LogosRedes>
