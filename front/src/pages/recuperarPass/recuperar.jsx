@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/titSes.png"
 import Input from "../../components/inputs/input";
-import botonLog from "../../assets/bot_recuperar.png"
+import botonLog from "../../assets2/bot_recuperar.png";
 import productosImg from "../../assets/productos.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";

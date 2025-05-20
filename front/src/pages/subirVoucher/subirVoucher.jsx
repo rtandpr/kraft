@@ -4,7 +4,7 @@ import styles from "./subirVoucher.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/tit5.png";
-import botonLog from "../../assets/boton_cargar.png";
+import botonLog from "../../assets2/bot_cargar.png";
 import espacio_stv from "../../assets/espacio_stv.png";
 import Swal from "sweetalert2";
 import usePageTracking from "../../hooks/useGa";
