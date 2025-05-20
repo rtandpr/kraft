@@ -187,9 +187,9 @@ segundos estilos para el footer */
 @media (max-width: 768px) {
 
   .Fondo {
-    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    background-image: url("../../assets2/fondoMobileLog2.jpg");
   
-    height: 200vh;
+    height: 180vh;
   }
 
   .ballonder2 {
