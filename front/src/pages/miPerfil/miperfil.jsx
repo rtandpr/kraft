@@ -60,7 +60,7 @@ const MiPerfil = () => {
         setLoading(true)
 
         try {
-          const response = await fetch("http://localhost:3000/img/getImgByidUser", {
+          const response = await fetch("https://kraft-production.up.railway.app/img/getImgByidUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const MiPerfil = () => {
     // }
 
     // try {
-    //   const response = await fetch("http://localhost:3000/user/deleteUser", {
+    //   const response = await fetch("https://kraft-production.up.railway.app/user/deleteUser", {
     //     method: "POST",
     //     headers: {
     //       "Content-Type": "application/json",

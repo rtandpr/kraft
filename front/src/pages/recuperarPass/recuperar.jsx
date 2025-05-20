@@ -89,7 +89,7 @@ const RecuperarPass = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/user/resetPass", {
+      const response = await fetch("https://kraft-production.up.railway.app/user/resetPass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@ const RecuperarPass = () => {
         email: formData.Correo,
       }
 
-      const response = await fetch("http://localhost:3000/user/generateTokenByUser", {
+      const response = await fetch("https://kraft-production.up.railway.app/user/generateTokenByUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

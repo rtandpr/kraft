@@ -73,7 +73,7 @@ const InicioSesion = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/user/getUserByEmail", {
+      const response = await fetch("https://kraft-production.up.railway.app/user/getUserByEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +129,7 @@ const InicioSesion = () => {
         email: formData.Correo,
       }
 
-      const response = await fetch("http://localhost:3000/user/generateTokenByUser", {
+      const response = await fetch("https://kraft-production.up.railway.app/user/generateTokenByUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
