@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Omnes';
-  src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype');
-  /* Cambié 'truetype' a 'opentype' si es necesario */
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Neulis';
+  src: url('../../fonts/fonnts.com-Neulis_Neue_Bold.otf') format('opentype');
+  font-weight: 100;
+  /* Hairline suele ser muy delgado */
+  font-style: bold;
 }
 
 
@@ -24,6 +24,7 @@
   color: #ffffff;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Neulis', sans-serif !important;
 }
 
 
