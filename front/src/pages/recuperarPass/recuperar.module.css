@@ -6,8 +6,11 @@
   font-style: normal;
 }
 
+
 .Fondo {
   background-image: url("../../assets2/fondo2.jpg");
+  background-size: cover;
+  height: 200vh;
 }
 
 .container {
@@ -39,13 +42,9 @@
 }
 
 
-.titleImg2 {
-  width: 55%;
-}
-
 
 .titleImg {
-  width: 17%;
+  width: 25%;
   margin-bottom: 10px;
 }
 
@@ -114,12 +113,83 @@
 }
 
 
+
+
+.titularIMG {
+  width: 45%;
+  position: relative;
+  margin-top: 0px;
+}
+
+
+.titleImg2 {
+  width: 55%;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+
+
+/* 
+segundos estilos para el footer */
+
+.containerFooter {
+  margin-top: -170px;
+  padding-top: 100px;
+  /*   background-color: white; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+  /* 
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: -10px;
+}
+
+
+
+
 @media (max-width: 768px) {
 
-.Fondo {
+  .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-    background-size: cover;
-}
+    height: 120vh;
+  }
 
   .ballonder2 {
     display: none;
@@ -147,10 +217,11 @@
     text-align: center;
   }
 
-  .productosImg{
+  .productosImg {
     position: relative;
     top: -40px;
   }
+
   .titleImg {
     width: 75%;
   }
@@ -166,8 +237,81 @@
 
   }
 
-.containerFooter {
-  margin-top: -100px;
-  padding-top: 100px;
+  .containerFooter {
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+  
+
+  /* footer 2 */
+
+  .containerFooter {
+    margin-top: -40vh;
+    padding-top: 120px;
+    /* background-color: white; */
+  }
+
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    font-family: 'Neulis', sans-serif;
+    margin-top: 0px;
+
+
+    position: none;
+    bottom: none;
+    width: none;
+    margin-top: 20px;
+    position: relative;
+    top: -30px;
+  }
+
+
+  .links {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Neulis2', sans-serif !important;
+    margin-top: 10px;
+  }
+
+  .brResp {
+    display: none;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+
+  
+.titularIMG {
+  width: 75%;
+  position: relative;
+  margin-top: 0px;
 }
+
+
+}
+
+
+
+@media (max-width:377px) {
+
+
+  .Fondo {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    height: 200vh;
+  }
+
 }

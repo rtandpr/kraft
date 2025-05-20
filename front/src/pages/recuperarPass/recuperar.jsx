@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from "react";
 import styles from "./recuperar.module.css";
 import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import iniImg from "../../assets/titSes.png"
 import Input from "../../components/inputs/input";
 import botonLog from "../../assets2/bot_recuperar.png";
-import productosImg from "../../assets/productos.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import usePageTracking from "../../hooks/useGa";
 import LogoImg from "../../assets2/logo.png";
 
 //importamos iconos
-import iconoSes from "../../assets/ico_nombre.png";
 import inconoPass from "../../assets/ico_contra.png";
 import inconoPassDer from "../../assets/ico_ojo.png";
 
 
 
 //importamos las imagenes de corazones
-import ballonder2 from "../../assets/balloon_der2.png";
-import ballonder from "../../assets/balloon_der.png";
-import ballon1zq from "../../assets/balloon_izq.png";
+import LogosRedes from "../../components/logosRedes/LogosRedes";
+import kraft_heinz from "../../assets2/kraft_heinz.png";
+import titularIMG from "../../assets2/titular.png";
 
 
 
@@ -216,13 +212,22 @@ const RecuperarPass = () => {
   return (
     <div className={styles.Fondo}>
       <Navbar></Navbar>
-       <div style={{height:"60px"}} className='divSpac'></div> 
+       <div style={{height:"10px"}} className='divSpac'></div> 
       <div className={styles.container}>
 
-        <h1 className={styles.title} style={{ marginTop: "40px" }}>
+        <h1 className={styles.title}>
+          <Link to={"/"}>
+            <img
+              src={LogoImg}
+              className={styles.titleImg}
+            />
+          </Link>
+        </h1>
+
+        <h1 className={styles.title}>
           <img
-            src={LogoImg}
-            className={styles.productosImg}
+            src={titularIMG}
+            className={styles.titularIMG}
           />
         </h1>
 
@@ -285,9 +290,26 @@ const RecuperarPass = () => {
                     </h1>
                 </div> */}
       </div>
+
       <div className={styles.containerFooter}>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
+        <footer className={styles.footer}>
+          <div className={styles.links}>
+            <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+            <br className={styles.brResp} />
+            <a href="https://www.kraftheinz.com/privacy-policy" target="_blank">
+              AVISO DE PRIVACIDAD
+            </a>
+          </div>
+          <div className={styles.social}>
+            <LogosRedes></LogosRedes>
+          </div>
+          <div className={styles.logo}>
+            <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
+          </div>
+        </footer>
       </div>
+
 
     </div>
   )
