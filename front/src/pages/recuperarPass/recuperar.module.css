@@ -188,7 +188,8 @@ segundos estilos para el footer */
 
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-    height: 120vh;
+  
+    height: 235vh;
   }
 
   .ballonder2 {
@@ -311,7 +312,7 @@ segundos estilos para el footer */
 
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-    height: 200vh;
+     height: 260vh;
   }
 
 }
