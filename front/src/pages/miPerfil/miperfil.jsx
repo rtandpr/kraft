@@ -2,20 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./miperfil.module.css";
 import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import iniImg from "../../assets/tit3.png"
 import botonLog from "../../assets2/bot_cargar.png"
-import productosImg from "../../assets/productos.png";
-import Swal from "sweetalert2";
 import LogoImg from "../../assets2/logo.png";
 import titularIMG from "../../assets2/titular.png";
 
 import usePageTracking from "../../hooks/useGa";
 
 //importamos las imagenes de corazones
-import ballonder2 from "../../assets/balloon_der2.png";
-import ballonder from "../../assets/balloon_der.png";
-import ballon1zq from "../../assets/balloon_izq.png";
 import LogosRedes from "../../components/logosRedes/LogosRedes";
 
 import kraft_heinz from "../../assets2/kraft_heinz.png";

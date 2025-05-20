@@ -25,6 +25,8 @@
 
 .Fondo {
   background-image: url("../../assets2/fondo2.jpg");
+  background-size: cover;
+  height: 200vh;
 }
 
 
@@ -89,10 +91,10 @@
 }
 
 
-.containerFooter {
+/* .containerFooter {
   margin-top: -170px;
   padding-top: 100px;
-}
+} */
 
 .ballonder2 {
   position: absolute;
@@ -141,13 +143,65 @@
 }
 
 
+/* 
+segundos estilos para el footer */
+
+.containerFooter {
+  margin-top: -170px;
+  padding-top: 100px;
+  /*   background-color: white; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+  /* 
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: -10px;
+}
 
 @media (max-width: 768px) {
 
 
+
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
-    background-size: cover;
+
+    height: 190vh;
   }
 
   .ballonder2 {
@@ -209,5 +263,64 @@
     position: relative;
   }
 
+
+  /* footer 2 */
+
+  .containerFooter {
+    margin-top: -40vh;
+    padding-top: 120px;
+    /* background-color: white; */
+  }
+
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    font-family: 'Neulis', sans-serif;
+    margin-top: 0px;
+
+
+    position: none;
+    bottom: none;
+    width: none;
+    margin-top: 20px;
+    position: relative;
+    top: -30px;
+  }
+
+
+  .links {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Neulis2', sans-serif !important;
+    margin-top: 10px;
+  }
+
+  .brResp {
+    display: none;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width:377px) {
+
+
+  .Fondo {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    height: 260vh;
+  }
 
 }

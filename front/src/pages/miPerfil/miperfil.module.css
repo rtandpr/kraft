@@ -17,7 +17,7 @@
 
 .Fondo {
   background-image: url("../../assets2/fondo2.jpg");
-  background-size:cover ;
+  background-size: cover;
   height: 200vh;
 }
 
@@ -227,7 +227,7 @@
 }
 
 
-.btnSend{
+.btnSend {
   width: 100%;
   position: relative;
   bottom: 10px;
@@ -498,14 +498,8 @@ segundos estilos para el footer */
     margin-top: -100px;
   }
 
-  .containerFooter {
-    margin-top: -40vh;
-    padding-top: 120px;
-    /* background-color: white; */
-  }
 
-
-    .title {
+  .title {
     width: 100%;
     text-align: center;
   }
@@ -522,9 +516,13 @@ segundos estilos para el footer */
   }
 
 
-    /* footer 2 */
+  /* footer 2 */
 
-
+  .containerFooter {
+    margin-top: -40vh;
+    padding-top: 120px;
+    /* background-color: white; */
+  }
 
   .footer {
     color: white;
@@ -539,7 +537,7 @@ segundos estilos para el footer */
     width: none;
     margin-top: 20px;
     position: relative;
-    top:-30px;
+    top: -30px;
   }
 
 

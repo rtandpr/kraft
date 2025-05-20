@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./subirVoucher.module.css";
 import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import iniImg from "../../assets/tit5.png";
 import botonLog from "../../assets2/bot_cargar.png"
 import espacio_stv from "../../assets2/espacio_st.png";
 import Swal from "sweetalert2";
 import usePageTracking from "../../hooks/useGa";
 import LogoImg from "../../assets2/logo.png";
 import titularIMG from "../../assets2/titular.png";
+import LogosRedes from "../../components/logosRedes/LogosRedes";
+import kraft_heinz from "../../assets2/kraft_heinz.png";
 
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
@@ -176,9 +176,23 @@ const SubirVoucher = () => {
       </div>
 
       <div className={styles.containerFooter}>
-        <Footer />
+        {/* <Footer></Footer> */}
+        <footer className={styles.footer}>
+          <div className={styles.links}>
+            <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+            <br className={styles.brResp} />
+            <a href="https://www.kraftheinz.com/privacy-policy" target="_blank">
+              AVISO DE PRIVACIDAD
+            </a>
+          </div>
+          <div className={styles.social}>
+            <LogosRedes></LogosRedes>
+          </div>
+          <div className={styles.logo}>
+            <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
+          </div>
+        </footer>
       </div>
-
     </div>
   );
 };
