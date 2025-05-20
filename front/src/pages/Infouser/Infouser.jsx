@@ -31,7 +31,7 @@ const Infouser = () => {
         const fetchUsuarios = async () => {
             setLoading(true);
             try {
-                const response = await fetch("http://localhost:3000/user/GetUsers", {
+                const response = await fetch("https://kraft-production.up.railway.app/user/GetUsers", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
