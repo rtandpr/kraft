@@ -50,9 +50,16 @@
 }
 
 .LogoImg {
-  width: 20%;
-  margin-top: -10px;
+  width: 25%;
 }
+
+
+.titularIMG {
+  width: 45%;
+  position: relative;
+  margin-top: 0px;
+}
+
 
 .loginForm {
   display: flex;
@@ -156,7 +163,7 @@
   }
 
   .LogoImg {
-    width: 60%;
+    width: 77%;
     margin-top: -10px;
   }
 
@@ -196,5 +203,11 @@
     cursor: pointer;
 
   }
+
+  .titularIMG {
+    width: 70%;
+    position: relative;
+  }
+
 
 }
