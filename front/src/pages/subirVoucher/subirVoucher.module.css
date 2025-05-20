@@ -86,7 +86,7 @@
   font-family: 'Neulis', sans-serif;
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
-  color: white;
+  color: #1d40a0;
   font-size: 24px;
 }
 
@@ -201,7 +201,7 @@ segundos estilos para el footer */
   .Fondo {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
 
-    height: 190vh;
+    height: 205vh;
   }
 
   .ballonder2 {
