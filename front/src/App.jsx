@@ -32,14 +32,18 @@ function App() {
         <Routes>
           <Route path="/" element={<PageEntrance><Home /></PageEntrance>} />
           <Route path="/Registro" element={<PageEntrance><Registro /></PageEntrance>} />
-          <Route path="/Priv" element={<PageEntrance><Priv /></PageEntrance>} />
-          <Route path="/Tyc" element={<PageEntrance><TyC /></PageEntrance>} />
           <Route path="/inicioSesion" element={<PageEntrance><InicioSesion /></PageEntrance>} />
           <Route path="/perfil" element={<PageEntrance><MiPerfil /></PageEntrance>} />
-          <Route path="/SubirVoucher" element={<PageEntrance><SubirVoucher/></PageEntrance>} />
-          <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />    
-          <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
+
           <Route path="/pass/:id" element={<RecuperarPass />} />
+          <Route path="/SubirVoucher" element={<PageEntrance><SubirVoucher/></PageEntrance>} />
+          <Route path="/Ganadores" element={<PageEntrance><Ganadores/></PageEntrance>} />
+
+          {/* <Route path="/Priv" element={<PageEntrance><Priv /></PageEntrance>} /> */}
+          <Route path="/Tyc" element={<PageEntrance><TyC /></PageEntrance>} />        
+          <Route path="/validate" element={<PageEntrance><CorreoOk/></PageEntrance>} />    
+
+ 
 
           {/*         
           <Route path="admin/infoUsers/total" element={<Infouser/>} />

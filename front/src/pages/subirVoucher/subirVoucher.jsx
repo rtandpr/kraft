@@ -63,7 +63,7 @@ const SubirVoucher = () => {
           
             setLoading(true)
             try {
-              const response = await fetch("https://7promo-production.up.railway.app/img/createImg", {
+              const response = await fetch("http://localhost:3000/img/createImg", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const SubirVoucher = () => {
 
               if(data.success){
                 setLoading(false)
-                navigate("/miPerfil")
+                navigate("/Perfil")
               }
 
               if(data.message == 'El usuario ya cargó esta imagen previamente.'){

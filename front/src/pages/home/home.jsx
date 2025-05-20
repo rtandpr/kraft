@@ -15,6 +15,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   usePageTracking()
   const { ref, inView } = useInView({
     triggerOnce: false, // queremos que se repita
@@ -47,19 +50,27 @@ const Home = () => {
 
   }, []);
 
+
+
+  const redirect = (param) => {
+
+        navigate("/registro")
+
+  };
+
   return (
     <div className={styles.homeFondo}>
       <Navbar></Navbar>
       <div className={styles.homeBackground}>
 
         <div className={styles.containerLogo} style={{ marginTop: "-40px" }}>
-         
+
           <img
             src={LogoImg}
             className={styles.LogoImg}
-            // data-aos="fade-right"
+          // data-aos="fade-right"
           />
-          
+
 
 
 
@@ -76,16 +87,18 @@ const Home = () => {
 
         <div className={styles.contentText}  >
 
+
           <p>Sube tu recibo de compra con productos participantes</p>
 
-          {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
+
           <img
             // data-aos="zoom-in"
             src={button}
             className={styles.buttonLog}
-            
+            onClick={() => redirect("")}
           />
-          {/* </Link> */}
+
+
           <img
             // data-aos="zoom-in"
             src={text2IMG}
@@ -93,13 +106,13 @@ const Home = () => {
           />
 
 
-      
-       
+
+
 
         </div>
-         <div className={styles.footerRes}>
-           <Footer></Footer>
-         </div>
+        <div className={styles.footerRes}>
+          <Footer></Footer>
+        </div>
 
 
       </div>
@@ -107,7 +120,7 @@ const Home = () => {
 
 
 
-    </div>
+    </div >
   );
 }
 

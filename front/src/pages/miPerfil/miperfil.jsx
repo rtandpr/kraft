@@ -28,13 +28,13 @@ const MiPerfil = () => {
   usePageTracking()
 
   useEffect(() => {
-    // try {
-    //     const storedData = localStorage.getItem("userData");
-    //     const dateUser = storedData ? JSON.parse(storedData) : null;
-    //     setData(dateUser);            
-    // } catch (error) {
-    //     navigate("/Registro")
-    // }
+    try {
+        const storedData = localStorage.getItem("userData");
+        const dateUser = storedData ? JSON.parse(storedData) : null;
+        setData(dateUser);            
+    } catch (error) {
+        navigate("/Registro")
+    }
 
   }, []);
 
@@ -50,6 +50,8 @@ const MiPerfil = () => {
   useEffect(() => {
 
     const fetchImage = async () => {
+      console.log("data id", data.id);
+      
       if (data.id) {
         const json = {
           userId: data.id,
@@ -58,7 +60,7 @@ const MiPerfil = () => {
         setLoading(true)
 
         try {
-          const response = await fetch("https://7promo-production.up.railway.app/img/getImgByidUser", {
+          const response = await fetch("http://localhost:3000/img/getImgByidUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -67,7 +69,7 @@ const MiPerfil = () => {
           });
 
           const result = await response.json();
-          console.log("imagenes del usuario", result);
+          console.log("prueba info", result);
           setImgUser(result.data)
         } catch (error) {
           console.error("Error en el registro:", error);
@@ -89,40 +91,40 @@ const MiPerfil = () => {
 
   const deleteUser = async () => {
 
-    let json = {
-      id: data.id,
-    }
+    // let json = {
+    //   id: data.id,
+    // }
 
-    try {
-      const response = await fetch("https://7promo-production.up.railway.app/user/deleteUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(json),
-      });
-
-
-      const data = await response.json();
-
-      console.log("data GET INFO USER", data);
-      localStorage.setItem("userData", JSON.stringify(data.data));
+    // try {
+    //   const response = await fetch("http://localhost:3000/user/deleteUser", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(json),
+    //   });
 
 
+    //   const data = await response.json();
 
-      if (data?.message == "User deleted") {
-        localStorage.setItem("userData", JSON.stringify(false));
-        navigate("/Registro")
-      }
+    //   console.log("data GET INFO USER", data);
+    //   localStorage.setItem("userData", JSON.stringify(data.data));
 
-    } catch (error) {
-      console.error("Error en el registro:", error);
-      Swal.fire(
-        "¡UPPPSS!",
-        "Error al eliminar el usuario",
-        "error"
-      );
-    }
+
+
+    //   if (data?.message == "User deleted") {
+    //     localStorage.setItem("userData", JSON.stringify(false));
+    //     navigate("/Registro")
+    //   }
+
+    // } catch (error) {
+    //   console.error("Error en el registro:", error);
+    //   Swal.fire(
+    //     "¡UPPPSS!",
+    //     "Error al eliminar el usuario",
+    //     "error"
+    //   );
+    // }
 
     localStorage.setItem("userData", JSON.stringify(false));
     navigate("/inicioSesion")
@@ -163,8 +165,8 @@ const MiPerfil = () => {
         <div className={styles.contentUserData}>
           <div className={styles.datosUserDiv}>
             <div className={styles.datosUser}>
-              <h1>{data?.name?.split(" ")[0]}name</h1>
-              <p className={styles.p1}>{data?.lastName} lastName</p>
+              <h1>{data?.name?.split(" ")[0]}</h1>
+              <p className={styles.p1}>{data?.lastName}</p>
 
               <p className={styles.p2} onClick={deleteUser}>Cerrar sesión</p>
             </div>

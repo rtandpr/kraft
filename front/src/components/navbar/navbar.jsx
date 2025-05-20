@@ -21,7 +21,7 @@ const Navbar = () => {
 
     if (param == "/inicioSesion") {
       if (userData?.id) {
-        navigate("/miPerfil")
+        navigate("/Perfil")
       } else {
         navigate("/inicioSesion")
       }
@@ -81,11 +81,13 @@ const Navbar = () => {
         className={`${styles["navbar-links"]} ${isMenuOpen ? styles["menu-open"] : ""
           }`}
       >
-        {/* <a onClick={() => scrollToSection('mec')} style={{ cursor: 'pointer' }}>Mecánica</a>
-      <a onClick={() => scrollToSection('premios')} style={{ cursor: 'pointer' }}>Premios</a> */}
 
         <Link to="/ganadores" style={{ textDecoration: 'none' }}>Ganadores</Link>
-        <Link to="/perfil" style={{ textDecoration: 'none' }}>Mi perfil</Link>
+        {
+          userData?.id ?
+          <Link to='/Perfil' style={{ textDecoration: 'none' }}> {"Mi perfil"} </Link> : 
+          <Link to='/inicioSesion' style={{ textDecoration: 'none' }}> {"Iniciar Sesión"} </Link> 
+        }
         <Link to="/registro" style={{ textDecoration: 'none' }}>Regístrate</Link>
 
         {/* <button className={`${styles.btn} ${styles["btn-login"]}`} onClick={() => redirect("/inicioSesion")}>

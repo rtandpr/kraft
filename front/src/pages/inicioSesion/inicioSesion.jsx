@@ -73,7 +73,7 @@ const InicioSesion = () => {
     }
 
     try {
-      const response = await fetch("https://7promo-production.up.railway.app/user/getUserByEmail", {
+      const response = await fetch("http://localhost:3000/user/getUserByEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const InicioSesion = () => {
       console.log("data GET INFO USER", data);
       localStorage.setItem("userData", JSON.stringify(data.data));
 
-      navigate("/miPerfil")
+      navigate("/perfil")
 
 
     } catch (error) {
@@ -129,7 +129,7 @@ const InicioSesion = () => {
         email: formData.Correo,
       }
 
-      const response = await fetch("https://7promo-production.up.railway.app/user/generateTokenByUser", {
+      const response = await fetch("http://localhost:3000/user/generateTokenByUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

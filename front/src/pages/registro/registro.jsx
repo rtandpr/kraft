@@ -163,13 +163,13 @@ const Registro = () => {
       tel: formData.Teléfono,
       pass: formData.Contraseña,
       email: formData.Correo,
-      privacidad: formData.aceptaPrivacidad,
+      // privacidad: formData.aceptaPrivacidad,
       Términosycondiciones: formData.aceptaTerminos,
-      recibirinformación: formData.aceptaInfo
+      // recibirinformación: formData.aceptaInfo
     }
 
     try {
-      const response = await fetch("https://7promo-production.up.railway.app/user/createUser", {
+      const response = await fetch("http://localhost:3000/user/createUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -182,6 +182,8 @@ const Registro = () => {
       }
 
       const data = await response.json();
+
+
 
       setLoading(false)
 
@@ -238,8 +240,6 @@ const Registro = () => {
   ///Funcion para aplicar las validaciones
   const isFormValid = () => {
 
-
-
     const {
       Nombres,
       Apellidos,
@@ -263,12 +263,12 @@ const Registro = () => {
 
 
     // Validar correo básico
-    // const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
 
     // Contraseñas coinciden
     const contrasenasValidas = Contraseña === confirmarContraseña;
 
-    return camposCompletos && checkboxesValidos && contrasenasValidas;
+    return camposCompletos && checkboxesValidos && contrasenasValidas ;
   };
 
 
@@ -379,7 +379,7 @@ const Registro = () => {
                 onChange={handleChange}
               />
               <label for="AceptoTérminosycondiciones">He leído y acepto los
-                <a to="/tyc" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a>
+                <a href="https://www.kraftheinz.com/privacy-policy" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a>
               </label>
             </div>
           </div>
