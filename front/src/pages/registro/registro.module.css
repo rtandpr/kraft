@@ -183,7 +183,7 @@
 .formGroup2 {
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   margin-top: -30px;
@@ -207,6 +207,8 @@
   padding: 20px;
   max-height: 55px;
   min-height: 55px;
+  font-family: 'Neulis', sans-serif;
+
 }
 
 
@@ -366,13 +368,13 @@
     padding: 0;
     position: relative;
     left: 0px;
-    
+
   }
 
-  .formGroup2 p{
+  .formGroup2 p {
     position: relative;
     right: 25px;
-    
+
   }
 
   .formGroup2 textarea {
