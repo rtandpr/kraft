@@ -73,7 +73,7 @@ const create = async (req, res) => {
               EN EL LINK,<br>
               COPIA Y PEGA EL SIGUIENTE VÍNCULO EN TU NAVEGADOR:</p>
 
-            <p style="font-size: 14px; color: #ffffff; word-break: break-all;">
+            <p style="font-size: 14px; color: #ffffff !important; text-decoration: none ; word-break: break-all;">
              https://kraft-btr7.vercel.app/validate
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;"> ¡AHORA EMPIEZA A SUBIR <br> TUS RECIBOS PARA
@@ -213,38 +213,42 @@ const generateTokenByUser = async (req, res) => {
                     <td
                         style="padding-top: 30px;padding-bottom: 0px; background-color: #eeb40b; text-align: center; color: #000;">
                         <b
-                            style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${person.name}</b>
+                            style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${person.name.toUpperCase()}aaaaa</b>
 
-                            <br>
-                            <br>
+                        <br>
+                        <br>
 
 
 
-                        <p style="font-size: 18px; margin: 0 0 10px; color: white;">Para recuperar tu contraseña, <br>
-                
+                        <p style="font-size: 18px; margin: 0 0 10px;  color: #21459a;">Para recuperar tu contraseña, <br>
+
                             da clic en el enlace que aparece
                             <br>
                             a continuación.
                         </p>
 
 
-                        
-                        <p style="font-size: 18px; margin: 0 0 10px; color: white; max-width: 600;">
-                            <br>
-                         https://kraft-btr7.vercel.app/pass/${token}
-                           <br>
-                        </p>
 
-                                                
-                        <p style="font-size: 18px; margin: 0 0 10px; color: white;">
+                        <p
+                            style="font-size: 18px; margin: 0 0 10px; color: #21459a; max-width: 100%; text-align: center;align-items: center; padding: 70px;">
                             <br>
-                              ¡Gracias!
-                            <br>
+                            <a href=" https://kraft-btr7.vercel.app/pass/${token}" style="text-decoration: none; color: #21459a;">
+                                https://kraft-btr7.vercel.app/pass/${token}
+
+                            </a>
                             <br>
                         </p>
 
 
-                  <img src="https://mcusercontent.com/fe493655bf73196cb05111254/images/329bf661-5b84-bd18-637f-fb5de38c68af.png"
+                        <p style="font-size: 18px; margin: 0 0 10px; color: #21459a;">
+                            <br>
+                            ¡Gracias!
+                            <br>
+                            <br>
+                        </p>
+
+
+                        <img src="https://mcusercontent.com/fe493655bf73196cb05111254/images/329bf661-5b84-bd18-637f-fb5de38c68af.png"
                             alt="7up Promo Header" width="600" style="display: block; width: 100%;">
                     </td>
                 </tr>
