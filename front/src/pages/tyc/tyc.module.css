@@ -52,7 +52,7 @@
   color: red;
   line-height: 1.6;
   padding-bottom: 100px;
-  max-height: 100vh;
+  max-height: 75vh;
   overflow-y: auto;
   /* 👈 esto permite el scroll vertical */
   margin-bottom: 100px;
@@ -266,7 +266,7 @@ segundos estilos para el footer */
 
   .tycBackground {
 
-    background-image: url("../../assets2/fondoMobileLog2.jpg");
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
   
     height: 260vh;
   
