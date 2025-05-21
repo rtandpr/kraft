@@ -378,8 +378,12 @@ const Registro = () => {
                 checked={formData.aceptaTerminos}
                 onChange={handleChange}
               />
-              <label for="AceptoTérminosycondiciones">He leído y acepto los
-                <a href="https://www.kraftheinz.com/privacy-policy" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a>
+              <label for="AceptoTérminosycondiciones">He leído y acepto los 
+                 
+                {/* <a href="" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a> */}
+                <Link to={"/tyc"} style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c", marginLeft:"5px" }}>términos y condiciones. </Link> 
+
+
               </label>
             </div>
           </div>
