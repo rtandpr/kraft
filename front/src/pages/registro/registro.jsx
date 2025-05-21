@@ -341,7 +341,7 @@ const Registro = () => {
           </div>
 
 
-          <div className={styles.formGroup}>
+          <div className={styles.formGroup} >
 
             <Input
               placeholder="Contraseña"
@@ -365,6 +365,18 @@ const Registro = () => {
               borderErr={touchconfirmarContraseña && formData.confirmarContraseña !== formData.Contraseña}
               msjErr={"Las contraseñas no coinciden."}
             />
+          </div>
+
+
+          <div className={styles.formGroup2} >
+
+            <p style={{color:"#2b469c"}}>
+              ¿A que te sabe Kraft Heinz?
+            </p>
+
+            <textarea type="text"  />
+
+           
           </div>
 
 
