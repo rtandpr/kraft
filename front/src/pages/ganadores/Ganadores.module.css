@@ -33,7 +33,7 @@
   background-image: url("../../assets2/fondo2.jpg");
   background-size: cover;
   width: 100%;
-  height: 180vh;
+  height: 200vh;
 }
 
 .container {
@@ -250,9 +250,9 @@
 @media (max-width: 768px) {
 
   .tycBackground {
-    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    background-image: url("../../assets2/fondoMobileLog2.jpg");
     background-position: center center;
-    height: 170vh;
+    height: 140vh;
     border-bottom: 1px solid #0a83b7;
     /* Usa 'sans-serif' como respaldo */
   }
@@ -376,9 +376,9 @@
 @media (max-width:377px) {
 
   .tycBackground {
-    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+    background-image: url("../../assets2/fondoMobileLog2.jpg");
     background-position: center center;
-    height: 195vh;
+    height: 165vh;
     border-bottom: 1px solid #0a83b7;
     /* Usa 'sans-serif' como respaldo */
   }
