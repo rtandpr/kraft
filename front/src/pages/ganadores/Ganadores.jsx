@@ -35,7 +35,7 @@ const Ganadores = () => {
           <Link to={"/"}>
             <img
               src={LogoImg}
-              className={styles.LogoImg}
+              className={styles.LogoImg2}
             />
           </Link>
         </h1>
