@@ -105,6 +105,7 @@
 .containerFooter {
   margin-top: 100px;
   padding-top: 100px;
+  padding-bottom: 30px;
 
 
   /* position: absolute;
@@ -178,7 +179,7 @@ segundos estilos para el footer */
 }
 
 .logoImg {
-  width: 20%;
+  width: 10%;
   margin-top: -10px;
 }
 
@@ -273,18 +274,18 @@ segundos estilos para el footer */
   }
 
   .links a {
-  margin: 0 10px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-  font-family: 'Neulis2', sans-serif !important;
-  margin-top: 10px;
-}
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Neulis2', sans-serif !important;
+    margin-top: 10px;
+  }
 
-.brResp{
-  display: none;
-}
+  .brResp {
+    display: none;
+  }
 
   .logoImg {
     width: 50%;

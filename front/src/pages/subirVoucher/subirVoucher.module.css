@@ -151,7 +151,7 @@ segundos estilos para el footer */
   padding-top: 100px;
   /*   background-color: white; */
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   width: 100%;
 }
 
@@ -190,7 +190,7 @@ segundos estilos para el footer */
 }
 
 .logoImg {
-  width: 20%;
+  width: 10%;
   margin-top: -10px;
 }
 
