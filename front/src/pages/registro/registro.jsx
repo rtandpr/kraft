@@ -28,7 +28,7 @@ const Registro = () => {
 
   useEffect(() => {
 
-    document.title = 'Regístrate / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = 'Regístrate / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 

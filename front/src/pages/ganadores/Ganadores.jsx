@@ -13,7 +13,7 @@ const Ganadores = () => {
 
     useEffect(() => {
 
-      document.title = 'Ganadores / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+      document.title = 'Ganadores / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
   
     }, []);
 

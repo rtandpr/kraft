@@ -34,7 +34,7 @@ const MiPerfil = () => {
 
   useEffect(() => {
 
-    document.title = 'Mi Perfil / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = 'Mi Perfil / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 

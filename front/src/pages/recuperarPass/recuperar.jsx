@@ -32,7 +32,7 @@ const RecuperarPass = () => {
 
   useEffect(() => {
 
-    document.title = 'Recuperar Contraseña / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = 'Recuperar Contraseña / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 

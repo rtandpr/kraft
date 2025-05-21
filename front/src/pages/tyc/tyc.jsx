@@ -15,7 +15,7 @@ const TyC = () => {
   usePageTracking()
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Términos & Condiciones / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = 'Términos & Condiciones / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 

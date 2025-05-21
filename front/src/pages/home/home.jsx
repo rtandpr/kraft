@@ -46,7 +46,7 @@ const Home = () => {
       setTimeout(scrollTo, 300);
     }
 
-    document.title = '7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+    document.title = 'KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 
