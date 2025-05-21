@@ -193,7 +193,7 @@ const MiPerfil = () => {
                       />
                     ))}
                   </div>
-                </> : <h2 style={{ fontSize: "60px", color: "black", position: "relative", top: "-60px" }}>Cargando...</h2>
+                </> : <h2 style={{ fontSize: "60px", color: "#2b469c;", position: "relative", top: "-60px" }}>Cargando...</h2>
               }
 
             </div>
