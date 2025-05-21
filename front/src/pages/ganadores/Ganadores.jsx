@@ -38,9 +38,9 @@ const Ganadores = () => {
                 </h1>
 
         <div className={styles.container2}>
-            <h1 className={styles.title}>
+            {/* <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
-            </h1>
+            </h1> */}
                 <p className={styles.text}>
                     Muy pronto tendremos aquí a los ganadores de nuestra promoción. 
                     <br />
