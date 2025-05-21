@@ -148,7 +148,7 @@
 
 
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   width: 100%;
 }
 
@@ -172,7 +172,7 @@
 
 .logoImg {
   width: 10%;
-  margin-top: -30px;
+  margin-top: -10px;
 }
 
 @media (max-width: 1200px) {
