@@ -2,12 +2,14 @@ import React, { useEffect } from 'react';
 import styles from './tyc.module.css';
 import Navbar from '../../components/navbar/navbar';
 import title from "../../assets/tituloc.png";
-import ProductosImg from "../../assets/productos.png";
 import Footer from '../../components/footer/footer';
-import ballonder2 from "../../assets/balloon_der2.png";
-import ballonder from "../../assets/balloon_der.png";
-import ballon1zq from "../../assets/balloon_izq.png";
 import usePageTracking from "../../hooks/useGa";
+import LogosRedes from '../../components/logosRedes/LogosRedes';
+
+import kraft_heinz from "../../assets2/kraft_heinz.png";
+import titularIMG from "../../assets2/titular.png";
+import { Link } from 'react-router-dom';
+import LogoImg from "../../assets2/logo.png";
 
 const TyC = () => {
   usePageTracking()
@@ -20,15 +22,33 @@ const TyC = () => {
 
   return (
     <div className={styles.tycBackground} id='tyc'>
-      <div style={{height:"160px"}} className='divSpac'></div>
+      <div style={{height:"60px"}} className='divSpac'></div>
     <div className={styles.container}>
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
         </div> 
+
+        <h1 className={styles.title}>
+          <Link to={"/"}>
+            <img
+              src={LogoImg}
+              className={styles.titleImg}
+            />
+          </Link>
+        </h1>
+
+        <h1 className={styles.title}>
+          <img
+            src={titularIMG}
+            className={styles.titularIMG}
+          />
+        </h1>
+
+
         <div className={styles.container2}>
-            <h1 className={styles.title}>
+            {/* <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
-            </h1>
+            </h1> */}
 
 
 
@@ -186,10 +206,24 @@ El Promotor y/o Administrador del Sorteo se reservan el derecho, sujeto a las re
 
   
 
-    <div className={styles.containerFooter} style={{marginTop:"-150px"}} >
-      <div className={styles.margenFoter}></div>
-      <Footer></Footer>     
-    </div> 
+      <div className={styles.containerFooter}>
+        {/* <Footer></Footer> */}
+        <footer className={styles.footer}>
+          <div className={styles.links}>
+            <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
+            <br className={styles.brResp} />
+            <a href="https://www.kraftheinz.com/privacy-policy" target="_blank">
+              AVISO DE PRIVACIDAD
+            </a>
+          </div>
+          <div className={styles.social}>
+            <LogosRedes></LogosRedes>
+          </div>
+          <div className={styles.logo}>
+            <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
+          </div>
+        </footer>
+      </div>
 
     </div>
 

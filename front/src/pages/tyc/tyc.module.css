@@ -26,7 +26,8 @@
 
 .tycBackground {
   background-image: url("../../assets2/fondo2.jpg");
-
+  background-size: cover;
+  height: 270vh;
 
   font-family: 'Neulis', sans-serif !important;
   /* Usa 'sans-serif' como respaldo */
@@ -35,13 +36,7 @@
   color: rgb(0, 0, 0);
 }
 
-.container {
-  /* background-color: #32ab56; */
-}
 
-.navbarStyles {
-  /* background-color: #32ab56; */
-}
 
 .container {
   /* padding: 20px; */
@@ -54,7 +49,7 @@
 .container2 {
   padding: 20px;
   font-family: Arial, sans-serif;
-  color: #053042;
+  color: red;
   line-height: 1.6;
   padding-bottom: 100px;
   max-height: 100vh;
@@ -72,7 +67,7 @@
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px !important;
   font-size: 30px;
-  color: #053042 !important;
+  color: #1d40a0 !important;
 }
 
 .container2 p {
@@ -80,6 +75,7 @@
   /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px !important;
   font-size: 16px;
+    color: #1d40a0 !important;
 }
 
 
@@ -181,6 +177,77 @@
   height: 100px;
 }
 
+
+
+/* 
+segundos estilos para el footer */
+
+.containerFooter {
+  margin-top: -170px;
+  padding-top: 100px;
+  /*   background-color: white; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  font-family: 'Neulis', sans-serif;
+  margin-top: 0px;
+
+  /* 
+  position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+.links {
+  margin-bottom: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Neulis2', sans-serif !important;
+}
+
+.logoImg {
+  width: 20%;
+  margin-top: -10px;
+}
+
+.titularIMG {
+  width: 45%;
+  position: relative;
+  margin-top: 0px;
+}
+
+
+.titleImg2 {
+  width: 55%;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+
+.titleImg {
+  width: 25%;
+  margin-bottom: 10px;
+}
 @media (min-width: 1600px) {
   .containImg {
     top: 62%;
@@ -198,9 +265,11 @@
 
 
   .tycBackground {
-    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
 
-
+    background-image: url("../../assets2/fondoMobileLog2.jpg");
+  
+    height: 260vh;
+  
     font-family: 'Neulis', sans-serif !important;
     /* Usa 'sans-serif' como respaldo */
     letter-spacing: 1.4px !important;
@@ -257,7 +326,7 @@
   .container2 {
     max-height: 100vh;
     position: relative;
-    margin-top: 150px;
+    margin-top: 0px;
   }
 
   .containImg {
@@ -288,6 +357,80 @@
 
   .margenFoter {
     height: 300px;
+  }
+
+
+    /* footer 2 */
+
+  .containerFooter {
+    margin-top: -40vh;
+    padding-top: 120px;
+    /* background-color: white; */
+  }
+
+  .footer {
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    font-family: 'Neulis', sans-serif;
+    margin-top: 0px;
+
+
+    position: none;
+    bottom: none;
+    width: none;
+    margin-top: 20px;
+    position: relative;
+    top: -30px;
+  }
+
+
+  .links {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Neulis2', sans-serif !important;
+    margin-top: 10px;
+  }
+
+  .brResp {
+    display: none;
+  }
+
+  .logoImg {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+
+  
+.titularIMG {
+  width: 75%;
+  position: relative;
+  margin-top: 0px;
+}
+
+  .titleImg {
+    width: 75%;
+  }
+
+}
+
+
+
+@media (max-width:377px) {
+
+
+  .Fondo {
+    background-image: url("../../assets2/fondo_registro_mobile3.jpg");
+     height: 260vh;
   }
 
 }
