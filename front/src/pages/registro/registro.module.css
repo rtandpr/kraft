@@ -65,6 +65,8 @@
   align-items: center;
   position: relative;
   top: -30px;
+  border: 1px solid black;
+  max-width: 800px;
 }
 
 .formGroup {
@@ -201,8 +203,8 @@
   height: 55px;
   border-radius: 10px;
   border: none;
-  max-width: 770px;
-  min-width: 770px;
+  max-width: 790px;
+  min-width: 790px;
   padding: 20px;
   max-height: 55px;
   min-height: 55px;

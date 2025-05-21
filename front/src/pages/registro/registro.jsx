@@ -292,6 +292,9 @@ const Registro = () => {
           />
         </h1>
 
+        <div style={{ width: "100%",display:"flex", justifyContent:"center" }} >
+
+       
         <form className={styles.loginForm} >
           <div className={styles.formGroup}>
             <Input
@@ -418,6 +421,9 @@ const Registro = () => {
 
           </h1>
         </form>
+       
+        </div>
+
         <footer className={styles.footer}>
           <div className={styles.links}>
             <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
