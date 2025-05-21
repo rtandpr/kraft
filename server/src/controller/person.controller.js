@@ -42,11 +42,11 @@ const create = async (req, res) => {
         <tr>
           <td
             style="padding-top: 30px;padding-bottom: 0px; background-color: #eeb40b; text-align: center; color: #000;">
-            <b style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${newPerson.name}</b>
+            <b style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${nnewPerson.name.toUpperCase()}</b>
             <br>
             <br>
 
-            <p style="font-size: 18px; margin: 0 0 10px; color: white;">PARA COMPLETAR TU REGISTRO,<br> DA CLICK EN EL
+            <p style="font-size: 18px; margin: 0 0 10px; color: #21459a;">PARA COMPLETAR TU REGISTRO,<br> DA CLICK EN EL
               ENLACE QUE APARECE <br> A CONTINUACIÓN.</p>
             </p>
 
