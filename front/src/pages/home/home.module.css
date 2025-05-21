@@ -18,7 +18,7 @@
 
 .homeBackground {
     width: 100%;
-    height: 200vh;
+    height: 190vh;
     position: relative;
     top: -0px;
     left: 0;
@@ -108,10 +108,26 @@
     position: absolute;
     bottom: -30px;
     width: 100%;
-    
+
 }
 
 @media (max-width: 1500px) {
+
+    .homeBackground {
+        width: 100%;
+        height: 210vh;
+        position: relative;
+        top: -0px;
+        left: 0;
+        background-image: url("../../assets2/fondo.jpg");
+        background-size: cover;
+        /* background-position: center center;  */
+        /* background-repeat: no-repeat; */
+        /* background-attachment: fixed; */
+        z-index: 1;
+
+    }
+
 
     .contentText {
         top: 75vh;
