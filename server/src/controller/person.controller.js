@@ -213,7 +213,7 @@ const generateTokenByUser = async (req, res) => {
                     <td
                         style="padding-top: 30px;padding-bottom: 0px; background-color: #eeb40b; text-align: center; color: #000;">
                         <b
-                            style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${person.name.toUpperCase()}aaaaa</b>
+                            style="font-size: 30px; color: #21459a; margin-bottom: 10px;padding-bottom: 100px;">${person.name.toUpperCase()}</b>
 
                         <br>
                         <br>
@@ -230,7 +230,7 @@ const generateTokenByUser = async (req, res) => {
 
 
                         <p
-                            style="font-size: 18px; margin: 0 0 10px; color: #21459a; max-width: 100%; text-align: center;align-items: center; padding: 70px;">
+                            style="font-size: 18px; margin: 0 0 10px; color: #21459a; max-width: 100%; text-align: center;align-items: center; padding: 25px;">
                             <br>
                             <a href=" https://kraft-btr7.vercel.app/pass/${token}" style="text-decoration: none; color: #21459a;">
                                 https://kraft-btr7.vercel.app/pass/${token}
