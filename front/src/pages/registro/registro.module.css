@@ -187,11 +187,13 @@
   flex-direction: row;
   margin-top: -30px;
   margin-top: 30px;
-  max-width: 830px;
+  max-width: 800px;
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  right: 16px;
 }
 
 .formGroup2 textarea {
@@ -199,8 +201,8 @@
   height: 55px;
   border-radius: 10px;
   border: none;
-  max-width: 790px;
-  min-width: 790px;
+  max-width: 770px;
+  min-width: 770px;
   padding: 20px;
   max-height: 55px;
   min-height: 55px;
