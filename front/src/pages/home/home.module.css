@@ -221,12 +221,9 @@
 }
 
 @media (max-height:700px) {
-    .homeBackground {
-        height:200vh;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-image: url("../../assets2/fondo_mobile.jpg");
-    }
+     .homeBackground {
+        height:220vh;
+    } 
 
 }
 
