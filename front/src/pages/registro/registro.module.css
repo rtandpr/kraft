@@ -185,6 +185,15 @@
 
 }
 
+@media (max-width: 1200px) {
+
+  .container {
+    height: 210vh;
+  }
+
+
+}
+
 /* Estilos para el footer */
 
 @media (max-width: 768px) {
@@ -192,7 +201,7 @@
   .container {
     background-image: url("../../assets2/fondo_registro_mobile3.jpg");
     background-position: center center;
-    height: 240vh;
+    height: 260vh;
     /* Usa 'sans-serif' como respaldo */
   }
 
@@ -303,16 +312,6 @@
     bottom: none;
     width: none;
   }
-
-}
-
-
-@media (max-width: 1200px) {
-
-  .container {
-    height: 210vh;
-  }
-
 
 }
 
