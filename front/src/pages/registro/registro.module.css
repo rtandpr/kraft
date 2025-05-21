@@ -184,7 +184,7 @@
 .formGroup2 {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   flex-direction: row;
   margin-top: -30px;
@@ -203,8 +203,8 @@
   height: 55px;
   border-radius: 10px;
   border: none;
-  max-width: 740px;
-  min-width: 740px;
+  max-width: 750px;
+  min-width: 750px;
   padding: 20px;
   max-height: 55px;
   min-height: 55px;

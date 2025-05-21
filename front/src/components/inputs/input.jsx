@@ -8,6 +8,7 @@ const Input = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr,
     const isPassword = type === "password";
     const inputType = isPassword && showPassword ? "text" : type;
 
+
     const handleTogglePassword = () => {
         console.log("se ejecuta", inputType);
 
@@ -18,6 +19,7 @@ const Input = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr,
         <div className={styles.content}>
             <div className={styles.contentInput}>
                 <label className={styles.label}>
+                    
                     {placeholder}
                 </label>
 
