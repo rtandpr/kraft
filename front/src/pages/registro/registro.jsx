@@ -39,9 +39,9 @@ const Registro = () => {
     Teléfono: "",
     Contraseña: "",
     confirmarContraseña: "",
-    aceptaPrivacidad: false,
     aceptaTerminos: false,
-    aceptaInfo: false
+    userText:"",
+
   });
 
   const [touchName, setTouchName] = useState(false);
@@ -163,13 +163,13 @@ const Registro = () => {
       tel: formData.Teléfono,
       pass: formData.Contraseña,
       email: formData.Correo,
-      // privacidad: formData.aceptaPrivacidad,
+      userText: formData.userText,
       Términosycondiciones: formData.aceptaTerminos,
       // recibirinformación: formData.aceptaInfo
     }
 
     try {
-      const response = await fetch("https://kraft-production.up.railway.app/user/createUser", {
+      const response = await fetch("http://localhost:3000/user/createUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -377,7 +377,7 @@ const Registro = () => {
               ¿A que te sabe Kraft Heinz?
             </p>
 
-            <textarea type="text"  />
+            <textarea type="text"   name="userText" onChange={handleChange} />
 
            
           </div>
