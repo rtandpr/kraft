@@ -31,8 +31,14 @@ const ImgSchema = {
   
   userId: {
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: DataTypes.TEXT,
     field: "user_id",
+  },
+  
+  userText: {
+    allowNull: true,
+    type: DataTypes.STRING,
+    field: "userText",
   },
 
 };

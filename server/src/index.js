@@ -11,7 +11,7 @@ async function startServer() {
       "Connection to the database has been established successfully."
     );
   
-    await sequelize.sync({ force: false }); // Ensure tables are created without dropping them
+    await sequelize.sync({ force: true }); // Ensure tables are created without dropping them
     console.log("Database synchronized");
 
     app.listen(PORT, () => {

@@ -62,11 +62,11 @@ const PersonSchema = {
     },
   },
 
-  userText: {
-    allowNull: true,
-    type: DataTypes.STRING,
-    field: "userText",
-  },
+  // userText: {
+  //   allowNull: true,
+  //   type: DataTypes.STRING,
+  //   field: "userText",
+  // },
 
   Términosycondiciones: {  
     allowNull: false,

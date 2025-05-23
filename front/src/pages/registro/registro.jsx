@@ -40,7 +40,7 @@ const Registro = () => {
     Contraseña: "",
     confirmarContraseña: "",
     aceptaTerminos: false,
-    userText:"",
+    // userText:"",
 
   });
 
@@ -163,7 +163,7 @@ const Registro = () => {
       tel: formData.Teléfono,
       pass: formData.Contraseña,
       email: formData.Correo,
-      userText: formData.userText,
+      // userText: formData.userText,
       Términosycondiciones: formData.aceptaTerminos,
       // recibirinformación: formData.aceptaInfo
     }
@@ -371,7 +371,7 @@ const Registro = () => {
           </div>
 
 
-          <div className={styles.formGroup2} >
+          {/* <div className={styles.formGroup2} >
 
             <p style={{color:"#2b469c"}}>
               ¿A que te sabe Kraft Heinz?
@@ -380,7 +380,7 @@ const Registro = () => {
             <textarea type="text"   name="userText" onChange={handleChange} />
 
            
-          </div>
+          </div> */}
 
 
 

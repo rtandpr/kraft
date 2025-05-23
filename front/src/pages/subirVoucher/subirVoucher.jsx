@@ -14,6 +14,7 @@ import kraft_heinz from "../../assets2/kraft_heinz.png";
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
   const [data, setData] = useState(false);
+  const [dataText, setDataText] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   usePageTracking()
@@ -59,12 +60,13 @@ const SubirVoucher = () => {
 
     let json = {
       userId: data.id,
-      img: imagenBase64
+      img: imagenBase64.FileReader,
+      userText: dataText,
     }
 
     setLoading(true)
     try {
-      const response = await fetch("https://kraft-production.up.railway.app/img/createImg", {
+      const response = await fetch("http://localhost:5173/img/createImg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,6 +102,11 @@ const SubirVoucher = () => {
     }
 
   };
+
+
+  const handleChange = (e) => { 
+     setDataText(e.target.value)
+  }
 
 
   return (
@@ -142,6 +149,21 @@ const SubirVoucher = () => {
             />
           </div>
 
+
+          <div className={styles.formGroup2} >
+
+            <p style={{color:"#2b469c"}}>
+              ¿A que te sabe Kraft Heinz?
+            </p>
+
+            <textarea type="text"   name="userText"
+            onChange={handleChange} 
+             
+             />
+
+           
+          </div>
+
           {/* Input para subir imagen */}
           <input
             type="file"
@@ -162,6 +184,8 @@ const SubirVoucher = () => {
             }
 
           </h1>
+
+
 
 
           {/* Mostrar imagen previa */}
