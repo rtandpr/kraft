@@ -179,7 +179,7 @@ const MiPerfil = () => {
                   <div
                     className={styles.containImgs}
                   >
-                    {imgUser.map((el, index) => (
+                    {imgUser?.map((el, index) => (
                       <img
                         key={index}
                         src={el.img} // o solo el.img si es una URL

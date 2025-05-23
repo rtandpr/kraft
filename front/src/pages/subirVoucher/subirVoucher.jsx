@@ -58,6 +58,9 @@ const SubirVoucher = () => {
       return;
     }
 
+    console.log("imagenBase64", imagenBase64);
+    
+
     let json = {
       userId: data.id,
       img: imagenBase64.FileReader,
@@ -66,7 +69,7 @@ const SubirVoucher = () => {
 
     setLoading(true)
     try {
-      const response = await fetch("http://localhost:5173/img/createImg", {
+      const response = await fetch("https://kraft-production.up.railway.app/img/createImg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -10,6 +10,9 @@ const createImg = async (req, res) => {
       where: { userId, img },
     });
 
+    console.log("existingImg", existingImg);
+    
+
     if (existingImg) {
       return res.status(400).json({
         success: false,
@@ -17,7 +20,10 @@ const createImg = async (req, res) => {
       });
     }
 
+    console.log("req.body", req.body);
     const newImg = await models.Img.create(req.body);
+    console.log("req.body 2", req.body);
+
 
     const person = await models.Person.findOne({
       where: {
