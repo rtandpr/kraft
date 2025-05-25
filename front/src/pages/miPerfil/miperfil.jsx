@@ -43,7 +43,6 @@ const MiPerfil = () => {
   useEffect(() => {
 
     const fetchImage = async () => {
-      console.log("data id", data.id);
       
       if (data.id) {
         const json = {

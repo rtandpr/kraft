@@ -14,7 +14,7 @@ import kraft_heinz from "../../assets2/kraft_heinz.png";
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
   const [data, setData] = useState(false);
-  const [dataText, setDataText] = useState(false);
+  const [dataText, setDataText] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   usePageTracking()
@@ -52,20 +52,20 @@ const SubirVoucher = () => {
 
   ///funcion para enviar la info al servidor
   const enviarImagen = async (e) => {
-
+   
+    
     if (!imagenBase64) {
       alert("Por favor selecciona una imagen antes de enviar.");
       return;
     }
 
-    console.log("imagenBase64", imagenBase64);
-    
-
     let json = {
       userId: data.id,
-      img: imagenBase64.FileReader,
+      // img: imagenBase64.FileReader,
+      img: imagenBase64,
       userText: dataText,
     }
+
 
     setLoading(true)
     try {
@@ -107,8 +107,8 @@ const SubirVoucher = () => {
   };
 
 
-  const handleChange = (e) => { 
-     setDataText(e.target.value)
+  const handleChange = (e) => {
+    setDataText(e.target.value)
   }
 
 
@@ -142,6 +142,21 @@ const SubirVoucher = () => {
             ¡Entre más vouchers registres, más oportunidades tienes de ganar!
           </p>
 
+
+          <div className={styles.formGroup2} style={{ marginBottom: "40px" }} >
+
+            <p style={{ color: "#2b469c" }}>
+              ¿A que te sabe Kraft Heinz?
+            </p>
+
+            <textarea type="text" name="userText"
+              onChange={handleChange}
+
+            />
+
+          </div>
+
+
           <div className={styles.divUp}>
             <img
               src={espacio_stv}
@@ -150,21 +165,6 @@ const SubirVoucher = () => {
               onClick={handleClickImagen}
               style={{ cursor: "pointer" }} // buena UX
             />
-          </div>
-
-
-          <div className={styles.formGroup2} >
-
-            <p style={{color:"#2b469c"}}>
-              ¿A que te sabe Kraft Heinz?
-            </p>
-
-            <textarea type="text"   name="userText"
-            onChange={handleChange} 
-             
-             />
-
-           
           </div>
 
           {/* Input para subir imagen */}
@@ -176,13 +176,31 @@ const SubirVoucher = () => {
             style={{ display: "none" }}
           />
 
+          {/* Mostrar imagen previa */}
+          {imagenBase64 && (
+            <div style={{ marginTop: "40px", maxWidth: "90%" }}>
+              {/* <p style={{ color: "" }}>Previsualización:</p> */}
+              <img src={imagenBase64} alt="preview" style={{ maxWidth: "100%", maxHeight: "300px", border: "2px solid white" }} />
+            </div>
+          )}
+
+
           <h1 className={styles.title} style={{ marginTop: "40px", cursor: "pointer", }}>
             {
               !loading ? <img
                 src={botonLog}
                 alt="boton cargar"
                 className={styles.titleImg2}
-                onClick={enviarImagen}
+                //onClick={() => console.log("se ejecuta")}
+
+                onClick={dataText && imagenBase64 ? () => enviarImagen() : null}
+                style={{
+                  filter: dataText && imagenBase64 ? "none" : "grayscale(100%)",
+                  opacity: dataText && imagenBase64 ? 1 : 0.5,
+                  pointerEvents: dataText && imagenBase64 ? "auto" : "none",
+                  cursor: dataText && imagenBase64 ? "pointer" : "not-allowed",
+                }}
+
               /> : <h2 style={{ fontSize: "60px", color: "white", position: "relative", top: "-60px" }}>Cargando...</h2>
             }
 
@@ -191,13 +209,7 @@ const SubirVoucher = () => {
 
 
 
-          {/* Mostrar imagen previa */}
-          {imagenBase64 && (
-            <div style={{ marginTop: "20px", maxWidth: "90%" }}>
-              {/* <p style={{ color: "" }}>Previsualización:</p> */}
-              <img src={imagenBase64} alt="preview" style={{ maxWidth: "100%", maxHeight: "300px", border: "2px solid white" }} />
-            </div>
-          )}
+
         </form>
 
       </div>

@@ -54,7 +54,17 @@ const Home = () => {
 
   const redirect = (param) => {
 
-        navigate("/registro")
+        const storedData = localStorage.getItem("userData");
+        const dateUser = storedData ? JSON.parse(storedData) : null;
+        
+        console.log("redirect", dateUser);
+        
+        if(dateUser){
+          navigate("/Perfil")
+        }else{
+          navigate("/inicioSesion")
+        }
+  
 
   };
 

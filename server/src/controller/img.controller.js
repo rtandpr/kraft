@@ -3,10 +3,10 @@ const {models} = require("../libs/sequelize")
 const createImg = async (req, res) => {
   try {
 
-    const { userId, img } = req.body;
+    const { userId, img , userText} = req.body;
 
     // Verificar si el usuario ya cargó la misma imagen
-    const existingImg = await models.Img.findOne({
+    const existingImg = await models?.Img?.findOne({
       where: { userId, img },
     });
 
@@ -20,9 +20,7 @@ const createImg = async (req, res) => {
       });
     }
 
-    console.log("req.body", req.body);
     const newImg = await models.Img.create(req.body);
-    console.log("req.body 2", req.body);
 
 
     const person = await models.Person.findOne({
@@ -53,9 +51,10 @@ const getImgByidUser = async (req, res) => {
 
     // Verificar si el usuario ya cargó la misma imagen
     const totalImgs = await models.Img.findAll({
-      where: { userId:userId },
+      where: { userId },
     });
 
+    console.log("totalImgs", totalImgs);
 
     res.json({ success: true, data: totalImgs });
 

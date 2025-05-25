@@ -5,7 +5,7 @@ const IMG_TABLE = "img";
 
 class Img extends Model {
   static config(sequelize) {
-    return { 
+    return {
       sequelize,
       tableName: IMG_TABLE,
       modelName: "Img",
@@ -15,28 +15,29 @@ class Img extends Model {
 }
 
 const ImgSchema = {
-    
+
   id: {
-        allowNull: false,
-        autoIncrement: true, // Auto-incremental
-        primaryKey: true, // Clave primaria
-        type: DataTypes.INTEGER, // Tipo entero
-      },
+    allowNull: false,
+    autoIncrement: true, // Auto-incremental
+    primaryKey: true, // Clave primaria
+    type: DataTypes.INTEGER, // Tipo entero
+  },
 
   img: {
     allowNull: false,
-    type: DataTypes.TEXT, 
+    type: DataTypes.TEXT,
     field: "img_voucher",
   },
-  
+
+
   userId: {
     allowNull: false,
-    type: DataTypes.TEXT,
+    type: DataTypes.INTEGER,
     field: "user_id",
   },
-  
+
   userText: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.STRING,
     field: "userText",
   },
