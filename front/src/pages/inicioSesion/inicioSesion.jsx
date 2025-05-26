@@ -280,7 +280,7 @@ const InicioSesion = () => {
             <Link
               to="/Registro"
               className={styles.a}
-              onClick={recuperarPass}
+              // onClick={recuperarPass}
             >regístrate aquí</Link>
           </p>
         </form>
