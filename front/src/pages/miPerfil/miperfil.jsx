@@ -38,6 +38,10 @@ const MiPerfil = () => {
 
   }, []);
 
+    ///se carga la vista desde el top 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
 
   useEffect(() => {

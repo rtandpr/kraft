@@ -187,7 +187,10 @@ const InicioSesion = () => {
 
   };
 
-
+  ///se carga la vista desde el top 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.Fondo}>

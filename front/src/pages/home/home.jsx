@@ -57,7 +57,7 @@ const Home = () => {
         const storedData = localStorage.getItem("userData");
         const dateUser = storedData ? JSON.parse(storedData) : null;
         
-        console.log("redirect", dateUser);
+  
         
         if(dateUser){
           navigate("/Perfil")
