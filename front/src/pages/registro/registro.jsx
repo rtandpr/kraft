@@ -181,12 +181,26 @@ const Registro = () => {
         throw new Error("Error al enviar los datos");
       }
 
+
+
+
       const data = await response.json();
 
 
 
       setLoading(false)
 
+
+       if(data.message == "Ya existe un usuario registrado con ese email."){
+        Swal.fire({
+          title: "Error",
+          text: "Ya existe un usuario registrado con ese email.",
+          icon: "error",
+          confirmButtonText: "OK"
+        });
+        return
+
+       }
 
       Swal.fire({
         title: "¡Listo!",

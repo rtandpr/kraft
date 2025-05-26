@@ -22,6 +22,22 @@ const transporter = nodemailer.createTransport({
 const create = async (req, res) => {
   try {
     //faltaria enviar un email de confirmacion al usuario
+    console.log("req.body", req.body);
+
+    const email = req.body.email;
+
+    // Validar si ya existe una persona con ese email
+    const existingUser = await models.Person.findOne({ where: { email } });
+
+    if (existingUser) {
+      return res.status(200).json({
+        success: false,
+        message: "Ya existe un usuario registrado con ese email.",
+      });
+
+      return
+    }
+    
     const newPerson = await models.Person.create(req.body);
     let envio = `
    <table width="100%" cellpadding="0" cellspacing="0" border="0"
