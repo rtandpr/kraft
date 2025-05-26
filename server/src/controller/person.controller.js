@@ -248,7 +248,7 @@ const generateTokenByUser = async (req, res) => {
                         <p
                             style="font-size: 18px; margin: 0 0 10px; color: #21459a; max-width: 100%; text-align: center;align-items: center; padding: 25px;">
                             <br>
-                            <a href=" http://sabeakraftheinz.com/pass/${token}" style="text-decoration: none; color: #21459a;">
+                            <a href="http://sabeakraftheinz.com/pass/${token}" style="text-decoration: none; color: #21459a;">
                                 http://sabeakraftheinz.com/pass/${token}
 
                             </a>
