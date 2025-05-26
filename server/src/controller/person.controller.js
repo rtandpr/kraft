@@ -67,7 +67,7 @@ const create = async (req, res) => {
             </p>
 
                         <!-- Button as image -->
-            <a href="https://kraft-btr7.vercel.app/validate" target="_blank"
+            <a href="http://sabeakraftheinz.com/validate" target="_blank"
               style="display: inline-block; text-decoration: none;background: linear-gradient(to bottom, #eeb40b 50%, #0781b4 50%);">
               <img
                 src="https://mcusercontent.com/fe493655bf73196cb05111254/_thumbs/bc77faae-fb8c-9106-93a3-a531153c780c.png"
@@ -90,7 +90,7 @@ const create = async (req, res) => {
               COPIA Y PEGA EL SIGUIENTE VÍNCULO EN TU NAVEGADOR:</p>
 
             <p style="font-size: 14px; color: #ffffff !important; text-decoration: none ; word-break: break-all;">
-             https://kraft-btr7.vercel.app/validate
+             http://sabeakraftheinz.com/validate
             </p>
             <p style="font-size: 18px; margin: 0 0 10px; color: white;"> ¡AHORA EMPIEZA A SUBIR <br> TUS RECIBOS PARA
               PARTICIPAR!
@@ -248,8 +248,8 @@ const generateTokenByUser = async (req, res) => {
                         <p
                             style="font-size: 18px; margin: 0 0 10px; color: #21459a; max-width: 100%; text-align: center;align-items: center; padding: 25px;">
                             <br>
-                            <a href=" https://kraft-btr7.vercel.app/pass/${token}" style="text-decoration: none; color: #21459a;">
-                                https://kraft-btr7.vercel.app/pass/${token}
+                            <a href=" http://sabeakraftheinz.com/pass/${token}" style="text-decoration: none; color: #21459a;">
+                                http://sabeakraftheinz.com/pass/${token}
 
                             </a>
                             <br>
