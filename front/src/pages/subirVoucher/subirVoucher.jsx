@@ -52,8 +52,8 @@ const SubirVoucher = () => {
 
   ///funcion para enviar la info al servidor
   const enviarImagen = async (e) => {
-   
-    
+
+
     if (!imagenBase64) {
       alert("Por favor selecciona una imagen antes de enviar.");
       return;
@@ -80,8 +80,16 @@ const SubirVoucher = () => {
       const data = await response.json();
 
       if (data.success) {
-        setLoading(false)
-        navigate("/Perfil")
+        Swal.fire({
+          title: "¡Gracias por participar!",
+          icon: "success", // ícono de check verde
+          confirmButtonText: "OK"
+        }).then(() => {
+          // Esto se ejecuta después de que el usuario presiona "OK"
+          setLoading(false);
+          navigate("/Perfil");
+        });
+
       }
 
       if (data.message == 'El usuario ya cargó esta imagen previamente.') {
@@ -103,6 +111,7 @@ const SubirVoucher = () => {
       );
       setLoading(false)
     }
+    setLoading(false)
 
   };
 
@@ -139,14 +148,14 @@ const SubirVoucher = () => {
 
         <form className={styles.loginForm}>
           <p className={styles.p}>
-            ¡Entre más vouchers registres, más oportunidades tienes de ganar!
+            ¡Entre más recibos de pago registres, más oportunidades tienes de ganar!
           </p>
 
 
           <div className={styles.formGroup2} style={{ marginBottom: "40px" }} >
 
             <p style={{ color: "#2b469c" }}>
-              ¿A que te sabe Kraft Heinz?
+              ¿A qué sabe Kraft Heinz?
             </p>
 
             <textarea type="text" name="userText"

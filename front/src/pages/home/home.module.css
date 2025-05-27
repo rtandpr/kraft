@@ -68,12 +68,14 @@
 .contentText {
     width: 100%;
     text-align: center;
-    position: relative;
-    top: 77vh;
+    /* position: relative;
+    top: 77vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 300px;
 }
 
 .contentText p {
@@ -129,9 +131,9 @@
 
     }
 
-    .contentText {
+    /* .contentText {
          top: 83vh; 
-    }
+    } */
 
     .text2IMG {
         width: 35%;
@@ -146,8 +148,8 @@
     .contentText {
         width: 100%;
         text-align: center;
-        position: relative;
-        top: 100vh;
+        /* position: relative;
+        top: 100vh; */
         display: flex;
         flex-direction: column;
         justify-content: center;

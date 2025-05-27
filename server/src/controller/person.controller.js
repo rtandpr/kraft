@@ -2,7 +2,7 @@ const {models} = require("../libs/sequelize");
 const crypto = require('crypto');
 
 const nodemailer = require("nodemailer");
-// 7uppromopr@gmail.com
+// Kraftpromopr@gmail.com
 //https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c3fe9771-322f-e344-2135-a6585f5db12c.png?w=561&dpr=2
 //https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c0d528b5-ad70-af56-213c-ac5b70edfaae.png?w=561&dpr=2
 //https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/1360d8e0-bbbf-6aa5-8f05-b4dd91945f24.png?w=561&dpr=2
@@ -51,7 +51,7 @@ const create = async (req, res) => {
             <!-- Header image -->
             <img
               src="https://mcusercontent.com/fe493655bf73196cb05111254/_thumbs/f6ebbb1d-60f0-eeb2-b9a0-3336953ed5a1.png"
-              alt="7up Promo Header" width="600" style="display: block; width: 100%;">
+              alt="Kraft Promo Header" width="600" style="display: block; width: 100%;">
           </td>
         </tr>
 
@@ -103,7 +103,7 @@ const create = async (req, res) => {
             <!-- Header image -->
             <img
               src="https://mcusercontent.com/fe493655bf73196cb05111254/_thumbs/b686fe50-34ca-ed37-373f-0b0375d92934.png"
-              alt="7up Promo Header" width="600" style="display: block; width: 100%;">
+              alt="Kraft Promo Header" width="600" style="display: block; width: 100%;">
           </td>
         </tr>
       </table>
@@ -221,7 +221,7 @@ const generateTokenByUser = async (req, res) => {
                     <td style="padding: 0;">
                         <!-- Header image -->
                         <img src="https://mcusercontent.com/fe493655bf73196cb05111254/_thumbs/f6ebbb1d-60f0-eeb2-b9a0-3336953ed5a1.png"
-                            alt="7up Promo Header" width="600" style="display: block; width: 100%;">
+                            alt="Kraft Promo Header" width="600" style="display: block; width: 100%;">
                     </td>
                 </tr>
 
@@ -265,7 +265,7 @@ const generateTokenByUser = async (req, res) => {
 
 
                         <img src="https://mcusercontent.com/fe493655bf73196cb05111254/images/329bf661-5b84-bd18-637f-fb5de38c68af.png"
-                            alt="7up Promo Header" width="600" style="display: block; width: 100%;">
+                            alt="Kraft Promo Header" width="600" style="display: block; width: 100%;">
                     </td>
                 </tr>
 

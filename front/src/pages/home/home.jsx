@@ -109,11 +109,11 @@ const Home = () => {
           />
 
 
-          <img
+          {/* <img
             // data-aos="zoom-in"
             src={text2IMG}
             className={styles.text2IMG}
-          />
+          /> */}
 
 
 

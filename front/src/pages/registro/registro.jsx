@@ -409,7 +409,7 @@ const Registro = () => {
               />
               <label for="AceptoTérminosycondiciones">He leído y acepto los 
                  
-                <a href="" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a> 
+                <a href="/tyc" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a> 
                 {/* <Link to={"/tyc"} style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c", marginLeft:"5px" }}>términos y condiciones. </Link>  */}
 
 
