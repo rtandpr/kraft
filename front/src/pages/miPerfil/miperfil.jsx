@@ -177,7 +177,7 @@ const MiPerfil = () => {
 
               {
                 !Loading ? <>
-                  <h1>Llevas {imgUser?.length > 0 ? imgUser?.length : 0} voucher(s) subido(s)</h1>
+                  <h1>Llevas {imgUser?.length > 0 ? imgUser?.length : 0} recibos de <br />pago subido(s)</h1>
                   <p className={styles.p1}>¡Entre más vouchers registres, más oportunidades tienes de ganar!</p>
                   <div
                     className={styles.containImgs}
@@ -196,7 +196,7 @@ const MiPerfil = () => {
                       />
                     ))}
                   </div>
-                </> : <h2 style={{ fontSize: "60px", color: "#2b469c;", position: "relative", top: "-60px" }}>Cargando...</h2>
+                </> : <h2 className={styles.h2Mob} style={{ fontSize: "60px", color: "#2b469c;", position: "relative", top: "-60px" }}>Cargando...</h2>
               }
 
             </div>

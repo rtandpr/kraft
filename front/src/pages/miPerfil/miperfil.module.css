@@ -167,6 +167,10 @@
   top: -45px;
 }
 
+.datosImg h1 br{
+  display: none;
+}
+
 .datosImg p {
   font-size: 18px;
   position: relative;
@@ -461,12 +465,17 @@ segundos estilos para el footer */
   }
 
   .datosImg h1 {
-    font-size: 40px;
+    font-size: 35px;
     position: relative;
-    top: -55px;
+    top: -35px;
     padding-right: 0;
     text-align: center;
   }
+
+
+  .datosImg h1 br{
+  display: flex;
+}
 
   .datosImg p {
     font-size: 35px;
@@ -475,6 +484,9 @@ segundos estilos para el footer */
     top: -90px;
   }
 
+  .h2Mob{
+    font-size: 35px !important;
+  }
 
   .containImgs {
     width: 90%;
