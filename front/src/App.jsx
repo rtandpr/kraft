@@ -43,9 +43,9 @@ function App() {
 
  
 
-          {/*         
+                 
           <Route path="admin/infoUsers/total" element={<Infouser/>} />
-          */}
+          
         
         </Routes>
       </BrowserRouter>

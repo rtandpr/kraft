@@ -162,7 +162,7 @@ const MiPerfil = () => {
           <div className={styles.datosUserDiv}>
             <div className={styles.datosUser}>
               <h1>{data?.name?.split(" ")[0]}</h1>
-              <p className={styles.p1}>{data?.lastName}</p>
+              <p className={styles.p1}>{data?.lastName?.split(" ")[0]}</p>
 
               <p className={styles.p2} onClick={deleteUser}>Cerrar sesión</p>
             </div>

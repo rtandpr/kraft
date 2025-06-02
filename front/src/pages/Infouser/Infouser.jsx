@@ -6,6 +6,9 @@ import styles from "./Infouser.module.css";
 import iconoSes from "../../assets/ico_nombre.png";
 import inconoPass from "../../assets/ico_contra.png";
 
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
+
 const Infouser = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
@@ -13,7 +16,9 @@ const Infouser = () => {
     const [loading, setLoading] = useState(false);
     const [usuarios, setUsuarios] = useState([]);
     const [usuariosTotal, setUsuariosTotal] = useState(0);
+    const [totalIMG, setTotalIMG] = useState(0);
     const [ganador, setGanador] = useState(null);
+    const [infoUser, setInfoUser] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -31,7 +36,7 @@ const Infouser = () => {
         const fetchUsuarios = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://kraft-production.up.railway.app/user/GetUsers", {
+                const response = await fetch("https://kraft-production.up.railway.app/user/totalUsuarios", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -41,6 +46,25 @@ const Infouser = () => {
 
                 const result = await response.json();
 
+                console.log("Resultado de la API:", result);
+                let totalImg = 0;
+
+                let usuariosTotales = []
+
+                result.message.forEach((usuario) => {
+
+                    if (usuario?.dataValues?.totalPoints > 0) {
+                        setTotalIMG(totalImg + 1);
+                        totalImg += 1;
+                    }
+usuariosTotales.push(usuario?.dataValues)
+                });
+
+
+
+                    setInfoUser(usuariosTotales);
+                    console.log("usuariosTotales", usuariosTotales);
+                    
                 setUsuariosTotal(result?.message?.length);
                 // Solo usuarios con al menos una imagen
                 const usuariosConImagen = result?.message
@@ -51,6 +75,7 @@ const Infouser = () => {
                     .filter((usuario) => usuario.images.length > 0);
 
                 setUsuarios(usuariosConImagen);
+                // setTotalIMG(totalImg)
                 console.log("Usuarios con imágenes:", usuariosConImagen);
                 setLoading(false);
 
@@ -82,6 +107,29 @@ const Infouser = () => {
         setGanador(usuarioGanador);
     };
 
+
+    const exportToExcel = () => {
+        if (infoUser.length === 0) {
+            alert("No hay datos para exportar.");
+            return;
+        }
+        console.log("infoUser", infoUser);
+
+        // Crear una hoja de cálculo
+        const worksheet = XLSX.utils.json_to_sheet(infoUser);
+
+        // Crear un libro de Excel
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Usuarios");
+
+        // Escribir el archivo Excel
+        const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+
+        // Guardar el archivo
+        const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
+        saveAs(data, "usuarios.xlsx");
+    };
+
     return (
         <div className={styles.div}>
             <form onSubmit={handleSubmit} className={styles.form}>
@@ -108,14 +156,14 @@ const Infouser = () => {
 
             {isAdmin && (
                 <div className={styles.userListContainer}>
-                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Participantes</h2> 
+                    <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Lista de Participantes</h2>
 
                     <p style={{ textAlign: "center", marginBottom: "20px" }}>
                         <strong>Total de participantes : {usuariosTotal}</strong>
                     </p>
 
                     <p style={{ textAlign: "center", marginBottom: "20px" }}>
-                        <strong>Total de participantes con imágenes: {usuarios.length}</strong>
+                        <strong>Total de participantes con imágenes: {totalIMG}</strong>
                     </p>
 
                     <div className={styles.divCenter}>
@@ -123,6 +171,11 @@ const Infouser = () => {
                             Realizar sorteo
                         </button>
                     </div>
+
+                    <div className={styles.divCenter}>
+                        <button onClick={exportToExcel} style={{ marginBottom: "20px" }} className={styles.btnStyle}>Descargar Excel</button>
+                    </div>
+
 
                     {ganador && (
                         <div className={styles.userCard}>

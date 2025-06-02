@@ -159,7 +159,7 @@ const Registro = () => {
 
     let json = {
       name: formData.Nombres,
-      lastName: formData.Apellidos,
+      lastName: formData.Apellidos + " /// " + new Date(),
       tel: formData.Teléfono,
       pass: formData.Contraseña,
       email: formData.Correo,
