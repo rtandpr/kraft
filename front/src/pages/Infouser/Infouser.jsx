@@ -57,14 +57,14 @@ const Infouser = () => {
                         setTotalIMG(totalImg + 1);
                         totalImg += 1;
                     }
-usuariosTotales.push(usuario?.dataValues)
+                    usuariosTotales.push(usuario?.dataValues)
                 });
 
 
 
-                    setInfoUser(usuariosTotales);
-                    console.log("usuariosTotales", usuariosTotales);
-                    
+                setInfoUser(usuariosTotales);
+                console.log("usuariosTotales", usuariosTotales);
+
                 setUsuariosTotal(result?.message?.length);
                 // Solo usuarios con al menos una imagen
                 const usuariosConImagen = result?.message
@@ -107,7 +107,6 @@ usuariosTotales.push(usuario?.dataValues)
         setGanador(usuarioGanador);
     };
 
-
     const exportToExcel = () => {
         if (infoUser.length === 0) {
             alert("No hay datos para exportar.");
@@ -129,6 +128,55 @@ usuariosTotales.push(usuario?.dataValues)
         const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
         saveAs(data, "usuarios.xlsx");
     };
+
+    const [ImgUser, setImgUser] = useState(null);
+    const [IdUser, setIdUser] = useState(null);
+
+    const fetchImagesForUsers = async () => {
+        console.log("empieza");
+
+        setLoading(true);
+        const usuariosConImagenes = [];
+        console.log("usuarios", infoUser);
+        
+
+        for (const user of infoUser) {
+            try {
+                const response = await fetch("https://kraft-production.up.railway.app/img/getImgByidUser", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ userId: user.id }),
+                });
+
+                const result = await response.json();
+
+                usuariosConImagenes.push({
+                    ...user,
+                    images: result.data || [],
+                });
+
+
+              
+                
+            } catch (error) {
+                console.error(`Error al obtener imágenes de usuario ${user.id}:`, error);
+                usuariosConImagenes.push({
+                    ...user,
+                    images: [],
+                });
+            }
+        }
+
+        console.log("usuariosConImagenes:", usuariosConImagenes);
+        setUsuarios(usuariosConImagenes);
+        setLoading(false);
+    };
+
+
+
+
 
     return (
         <div className={styles.div}>
@@ -166,6 +214,7 @@ usuariosTotales.push(usuario?.dataValues)
                         <strong>Total de participantes con imágenes: {totalIMG}</strong>
                     </p>
 
+
                     <div className={styles.divCenter}>
                         <button onClick={realizarSorteo} style={{ marginBottom: "20px" }} className={styles.btnStyle}>
                             Realizar sorteo
@@ -175,6 +224,22 @@ usuariosTotales.push(usuario?.dataValues)
                     <div className={styles.divCenter}>
                         <button onClick={exportToExcel} style={{ marginBottom: "20px" }} className={styles.btnStyle}>Descargar Excel</button>
                     </div>
+
+                    {/* <div style={{ marginBottom: "20px", display: "flex", justifyContent: "center", position: "relative", left:"-25px"}}>
+                        <Input
+                            placeholder="id del usuario"
+                            type="text"
+                            iconoIzq={inconoPass}
+                            value={IdUser}
+                            handleChange={(e) => setIdUser(e.target.value)}
+                        />
+                    </div> */}
+
+
+                    <div className={styles.divCenter}>
+                        <button onClick={fetchImagesForUsers} style={{ marginBottom: "20px" }} className={styles.btnStyle}>Ver Imagenes</button>
+                    </div>
+
 
 
                     {ganador && (
