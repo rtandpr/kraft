@@ -6,11 +6,13 @@ const {
   deleteUser,
   resetPass,
   generateTokenByUser,
-  getUsers
+  getUsers,
+  imgByUser
 } = require("../controller/person.controller");
 const router = express.Router();
 
 router.post("/totalUsuarios", getUsers);
+router.post("/imgByUser", imgByUser);
 router.post("/createUser", create);
 router.post("/confirmEmail", confirmEmail);
 router.post("/getUserByEmail", getByEmail);

@@ -11,6 +11,7 @@ import usePageTracking from "../../hooks/useGa";
 import Swal from "sweetalert2";
 import LogoImg from "../../assets2/logo.png";
 import titularIMG from "../../assets2/titular.png";
+import gracias from "../../assets2/gracias.png";
 
 //importamos iconos
 import iconoSes from "../../assets/ico_nombre.png";
@@ -18,6 +19,8 @@ import inconoPass from "../../assets/ico_contra.png";
 import inconoPassDer from "../../assets/ico_ojo.png";
 import kraft_heinz from "../../assets2/kraft_heinz.png";
 import LogosRedes from "../../components/logosRedes/LogosRedes";
+import textoFooter from "../../assets2/texto_abajo.png"
+import graciasImg from "../../assets2/gracias.png"
 
 
 
@@ -30,7 +33,7 @@ const InicioSesion = () => {
 
   useEffect(() => {
 
-    document.title = 'Inicia Sesión / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
+    document.title = ' Gracias / KRAFT HEINZ: SABE A GANAR EN VERANO, SABE A KRAFT HEINZ';
 
   }, []);
 
@@ -73,7 +76,7 @@ const InicioSesion = () => {
     }
 
     try {
-      const response = await fetch("https://kraft-production.up.railway.app/user/getUserByEmail", {
+      const response = await fetch("https://kraftweb-production.up.railway.app/user/getUserByEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +132,7 @@ const InicioSesion = () => {
         email: formData.Correo,
       }
 
-      const response = await fetch("https://kraft-production.up.railway.app/user/generateTokenByUser", {
+      const response = await fetch("https://kraftweb-production.up.railway.app/user/generateTokenByUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -194,8 +197,7 @@ const InicioSesion = () => {
 
   return (
     <div className={styles.Fondo}>
-      <Navbar></Navbar>
-      <div style={{ height: "60px" }} className='divSpac'></div>
+      {/* <Navbar></Navbar> */}
       <div className={styles.container}>
         <h1 className={styles.title}>
           <Link to={"/"}>
@@ -213,82 +215,125 @@ const InicioSesion = () => {
           />
         </h1>
 
-        {/* <h1 className={styles.title}>
-          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
-        </h1> */}
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }} >
 
-        <form className={styles.loginForm}>
-          <div className={styles.formGroup}>
-            <Input
-              placeholder="Correo electrónico"
-              type="email"
-              iconoIzq={iconoSes}
-              handleChange={handleCorreo}
-            //   borderErr={touchCorreo && formData.Correo == ""}
-            //   msjErr={"El correo es obligatorio."}
-            />
-            <div style={{ width: "50px" }}></div>
 
-            <Input
-              placeholder="Contraseña"
-              type="password"
-              iconoIzq={inconoPass}
-              iconoDer={inconoPassDer}
-              handleChange={handleContraseña}
-            //   borderErr={touchconfirmarContraseña && formData.confirmarContraseña !== formData.Contraseña}
-            //   msjErr={ "Las contraseñas no coinciden."}
-            />
+          <div className={styles.formGroup} style={{position:"relative", top:"120px"}}>
+
+            <img src={graciasImg} alt="" className={styles.imgTexto} />
+
+          </div>
+
+          {/* 
+          <form className={styles.loginForm} >
+            <div className={styles.formGroup}>
+              <InputLarge
+                placeholder="Nombre y apellido"
+                type="text"
+                iconoIzq={iconoSes}
+                handleChange={handleName}
+                borderErr={touchName && formData.Nombres == ""}
+                msjErr={"El nombre es obligatorio."}
+              />
+
+
+            </div>
+
+            <div className={styles.formGroup}>
+
+
+              <Input
+                placeholder="Número de teléfono"
+                type="text"
+                iconoIzq={iconoTel}
+                handleChange={handleTeléfono}
+                borderErr={touchTeléfono && formData.Teléfono == ""}
+                msjErr={"El teléfono es obligatorio."}
+              />
+
+              <div style={{ width: "100px" }} />
+
+              <Input
+                placeholder="E-mail"
+                type="email"
+                iconoIzq={iconoCorreo}
+                handleChange={handleCorreo}
+                borderErr={touchCorreo && formData.Correo == ""}
+                msjErr={"El correo es obligatorio."}
+              />
+
+            </div>
+
+
+            <div className={styles.formGroup} >
+
+              <img
+                src={VoucherBTN}
+                alt="img/subir voucher"
+                className={styles.imgVoucher}
+                onClick={handleClickImagen}
+              />
+
+              <input
+                type="file"
+                accept="image/*"
+                ref={inputRef}
+                onChange={handleImagenChange}
+                style={{ display: "none" }}
+              />
+
+            </div>
+
+
+
+
+            <div className={styles.formGroup} >
+
+              <Textarea
+                placeholder="¿A qué te sabe Kraft Heinz?"
+                type="text"
+                iconoIzq={iconoSes}
+                handleChange={handleText}
+                borderErr={touchText && formData.userText == ""}
+                msjErr={"La descripción es obligatoria."}
+                minHeigth={"150px"}
+              />
+
+            </div>
+
+
+
+
+
+            <h1 className={styles.title} style={{ marginTop: "70px" }}>
+              <img
+                src={botonLog}
+                alt="iniImg"
+                className={styles.titleImg2}
+                onClick={isFormValid() ? handleSubmit : null}
+                style={{
+                  filter: isFormValid() ? "none" : "grayscale(100%)",
+                  opacity: isFormValid() ? 1 : 0.5,
+                  pointerEvents: isFormValid() ? "auto" : "none",
+                  cursor: isFormValid() ? "pointer" : "not-allowed",
+                }}
+              />
+
+            </h1>
+          </form> */}
+
+        </div>
+
+        <footer className={styles.footer}>
+
+          <div className={styles.formGroup} >
+
+            <img src={textoFooter} alt="" className={styles.imgTexto2} />
+
           </div>
 
 
-          <h1 className={styles.title} style={{ marginTop: "40px" }}>
-            <img
-              src={botonLog}
-              alt="iniImg"
-              className={styles.titleImg2}
 
-              onClick={isFormValid() ? handleSubmit : null}
-              style={{
-                filter: isFormValid() ? "none" : "grayscale(100%)",
-                opacity: isFormValid() ? 1 : 0.5,
-                pointerEvents: isFormValid() ? "auto" : "none",
-                cursor: isFormValid() ? "pointer" : "not-allowed",
-              }}
-            />
-          </h1>
-
-          <p className={styles.p}>
-            Si olvidaste tu contraseña, escribe tu correo electrónico
-            <br />
-            en el campo correspondiente, y da clic
-
-            <a
-              // href=""
-              className={styles.a}
-              onClick={recuperarPass}
-              style={{ cursor: "pointer", borderBottom: "2px solid white" }}
-
-            > a este enlace</a>
-
-
-          </p>
-
-
-          <p
-            className={styles.p}>
-            Si no tienes un cuenta,
-            <Link
-              to="/Registro"
-              className={styles.a}
-              // onClick={recuperarPass}
-            >regístrate aquí</Link>
-          </p>
-        </form>
-
-      </div>
-      <div className={styles.containerFooter}>
-        {/* <Footer></Footer> */}
-        <footer className={styles.footer}>
           <div className={styles.links}>
             <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
             <br className={styles.brResp} />
@@ -303,8 +348,8 @@ const InicioSesion = () => {
             <img src={kraft_heinz} alt="iniImg" className={styles.logoImg} />
           </div>
         </footer>
-      </div>
 
+      </div>
     </div>
   )
 }

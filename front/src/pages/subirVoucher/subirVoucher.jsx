@@ -69,7 +69,7 @@ const SubirVoucher = () => {
 
     setLoading(true)
     try {
-      const response = await fetch("https://kraft-production.up.railway.app/img/createImg", {
+      const response = await fetch("https://kraftweb-production.up.railway.app/img/createImg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

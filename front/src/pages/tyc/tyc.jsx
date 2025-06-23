@@ -25,7 +25,7 @@ const TyC = () => {
       <div style={{ height: "60px" }} className='divSpac'></div>
       <div className={styles.container}>
         <div className={styles.navbarStyles}>
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
         </div>
 
         <h1 className={styles.title}>

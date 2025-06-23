@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./registro.module.css";
 import Navbar from "../../components/navbar/navbar";
@@ -14,12 +14,16 @@ import inconoPass from "../../assets/ico_contra.png";
 import inconoPassDer from "../../assets/ico_ojo.png";
 import iconoCorreo from "../../assets/ico_correo.png";
 import iconoTel from "../../assets/ico_telefono.png";
+import VoucherBTN from "../../assets2/VoucherBTN.png"
+import textoFooter from "../../assets2/texto_abajo.png"
 
 //importamos las imagenes de corazones
 import kraft_heinz from "../../assets2/kraft_heinz.png";
 import Swal from "sweetalert2";
 import usePageTracking from "../../hooks/useGa";
 import LogosRedes from "../../components/logosRedes/LogosRedes";
+import InputLarge from "../../components/inputLarge/inputLarge";
+import Textarea from "../../components/textArea/textArea";
 
 
 const Registro = () => {
@@ -34,25 +38,17 @@ const Registro = () => {
 
   const [formData, setFormData] = useState({
     Nombres: "",
-    Apellidos: "",
     Correo: "",
     Teléfono: "",
-    Contraseña: "",
-    confirmarContraseña: "",
-    aceptaTerminos: false,
-    // userText:"",
+    userText: "",
 
   });
 
   const [touchName, setTouchName] = useState(false);
-  const [touchApellidos, setTouchApellidos] = useState(false);
   const [touchCorreo, setTouchCorreo] = useState(false);
   const [touchTeléfono, setTouchTeléfono] = useState(false);
-  const [touchContraseña, setTouchContraseña] = useState(false);
-  const [touchconfirmarContraseña, setTouchconfirmarContraseña] = useState(false);
-  const [touchaceptaPrivacidad, setTouchaceptaPrivacidad] = useState(false);
-  const [touchaceptaTerminos, setTouchaceptaTerminos] = useState(false);
-  const [touchaceptaInfo, setTouchaceptaInfo] = useState(false);
+  const [touchText, setTouchText] = useState(false);
+  const [imagenBase64, setImagenBase64] = useState(null);
 
   const [Loading, setLoading] = useState(false);
 
@@ -71,84 +67,73 @@ const Registro = () => {
     if (name == "aceptaInfo") setTouchaceptaInfo(true)
   };
 
-  ///funciones para recolectar la info
+
   const handleName = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
+
+    // Permitir solo letras y espacios (con acentos y ñ)
+    const soloLetras = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
 
     setFormData((prevData) => ({
       ...prevData,
-      "Nombres": value
+      "Nombres": soloLetras
     }));
 
-    setTouchName(true)
-
+    setTouchName(true);
   };
 
-  const handleApellidos = (e) => {
-    const { name, value } = e.target;
 
-    setFormData((prevData) => ({
-      ...prevData,
-      "Apellidos": value
-    }));
 
-    setTouchApellidos(true)
+const handleCorreo = (e) => {
+  const { value } = e.target;
 
-  };
+  // // Regex básico para validar formato xxx@xxx.xxx
+  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const handleCorreo = (e) => {
-    const { name, value } = e.target;
-
+  // // Solo actualiza si el valor cumple el formato o está vacío (para permitir borrar)
+  // if (value === '' || emailRegex.test(value)) {
     setFormData((prevData) => ({
       ...prevData,
       "Correo": value
     }));
+  // }
 
-    setTouchCorreo(true)
+  setTouchCorreo(true);
+};
 
 
-  };
 
-  const handleTeléfono = (e) => {
+const handleTeléfono = (e) => {
+  const { name, value } = e.target;
+
+  // Eliminar todo lo que no sean números
+  const soloNumeros = value.replace(/[^0-9]/g, '');
+
+  setFormData((prevData) => ({
+    ...prevData,
+    "Teléfono": soloNumeros
+  }));
+
+  setTouchTeléfono(true);
+};
+
+
+
+  const handleText = (e) => {
     const { name, value } = e.target;
 
     setFormData((prevData) => ({
       ...prevData,
-      "Teléfono": value
+      "userText": value
     }));
 
-    setTouchTeléfono(true)
-
-
+    setTouchText(true)
 
   };
 
-  const handleContraseña = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      "Contraseña": value
-    }));
-
-    setTouchContraseña(true)
-
-
-  };
-
-  const handleconfirmarContraseña = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      "confirmarContraseña": value
-    }));
-
-    setTouchconfirmarContraseña(true)
 
 
 
-  };
 
 
   ///funcion para enviar la info al servidor
@@ -159,17 +144,18 @@ const Registro = () => {
 
     let json = {
       name: formData.Nombres,
-      lastName: formData.Apellidos + " /// " + new Date(),
       tel: formData.Teléfono,
-      pass: formData.Contraseña,
       email: formData.Correo,
-      // userText: formData.userText,
-      Términosycondiciones: formData.aceptaTerminos,
-      // recibirinformación: formData.aceptaInfo
+      userText: formData.userText,
+      img: imagenBase64
     }
 
+
+    console.log("json ", json);
+
+
     try {
-      const response = await fetch("https://kraft-production.up.railway.app/user/createUser", {
+      const response = await fetch("https://kraftweb-production.up.railway.app/user/createUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -191,7 +177,7 @@ const Registro = () => {
       setLoading(false)
 
 
-       if(data.message == "Ya existe un usuario registrado con ese email."){
+      if (data.message == "Ya existe un usuario registrado con ese email.") {
         Swal.fire({
           title: "Error",
           text: "Ya existe un usuario registrado con ese email.",
@@ -200,16 +186,18 @@ const Registro = () => {
         });
         return
 
-       }
+      }
 
-      Swal.fire({
-        title: "¡Listo!",
-        text: "Para culminar tu registro, revisa el email que acabamos de enviarte y sigue las instrucciones.",
-        icon: "success",
-        confirmButtonText: "OK"
-      }).then(() => {
-        navigate("/inicioSesion");
-      });
+      navigate("/Final");
+
+      // Swal.fire({
+      //   title: "¡Listo!",
+      //   text: "Para culminar tu registro, revisa el email que acabamos de enviarte y sigue las instrucciones.",
+      //   icon: "success",
+      //   confirmButtonText: "OK"
+      // }).then(() => {
+      //   navigate("/inicioSesion");
+      // });
 
 
 
@@ -223,72 +211,55 @@ const Registro = () => {
 
 
 
-  ///Funcion para obtener indidarle al usuario las cosas que faltan completar en el formulario
-  ///Considerar recoletar cada mensaje en su respectivo handle para mostrarlo en cada input
-  const validateForm = () => {
-    const newErrors = {};
-
-    if (!formData.Nombres.trim()) newErrors.Nombres = "El nombre es obligatorio.";
-    if (!formData.Apellidos.trim()) newErrors.Apellidos = "El apellido es obligatorio.";
-    if (!formData.Correo.trim()) newErrors.Correo = "El correo es obligatorio.";
-    else if (!/\S+@\S+\.\S+/.test(formData.Correo)) newErrors.Correo = "El correo no es válido.";
-
-    if (!formData.Teléfono.trim()) newErrors.Teléfono = "El teléfono es obligatorio.";
-    else if (!/^\d{8,15}$/.test(formData.Teléfono)) newErrors.Teléfono = "Número inválido (8-15 dígitos).";
-
-    if (!formData.Contraseña) newErrors.Contraseña = "La contraseña es obligatoria.";
-    else if (formData.Contraseña.length < 6) newErrors.Contraseña = "Debe tener al menos 6 caracteres.";
-
-    if (formData.confirmarContraseña !== formData.Contraseña) {
-      newErrors.confirmarContraseña = "Las contraseñas no coinciden.";
-    }
-
-    // if (!formData.aceptaPrivacidad) newErrors.aceptaPrivacidad = "Debes aceptar el aviso de privacidad.";
-    if (!formData.aceptaTerminos) newErrors.aceptaTerminos = "Debes aceptar los términos y condiciones.";
-
-    setErrors(newErrors);
-  };
-
-
 
   ///Funcion para aplicar las validaciones
   const isFormValid = () => {
 
     const {
       Nombres,
-      Apellidos,
       Correo,
       Teléfono,
-      Contraseña,
-      confirmarContraseña,
-      aceptaPrivacidad,
-      aceptaTerminos,
-      aceptaInfo
+      userText
     } = formData;
 
+
     // Validar campos obligatorios y checkboxes obligatorios
-    const camposCompletos = Nombres && Apellidos && Correo && Teléfono && Contraseña && confirmarContraseña;
-
-    console.log("camposCompletos", camposCompletos);
-
-    const checkboxesValidos = aceptaTerminos
-
-    console.log("checkboxesValidos", checkboxesValidos);
+    return Nombres && Correo && Teléfono && userText
 
 
-    // Validar correo básico
-    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Correo);
-
-    // Contraseñas coinciden
-    const contrasenasValidas = Contraseña === confirmarContraseña;
-
-    return camposCompletos && checkboxesValidos && contrasenasValidas ;
   };
+
+
+  //funcion para cargar la imagen 
+
+  const inputRef = useRef(null);
+
+
+  const handleImagenChange = (e) => {
+
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImagenBase64(reader.result); // esto es la imagen en base64
+    };
+    reader.readAsDataURL(file);
+
+  };
+
+
+
+
+  const handleClickImagen = () => {
+    inputRef.current.click(); // activa el input escondido
+  };
+
 
 
   return (
     <div className={styles.Fondo}>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className={styles.container}>
         <h1 className={styles.title}>
           <Link to={"/"}>
@@ -306,139 +277,121 @@ const Registro = () => {
           />
         </h1>
 
-        <div style={{ width: "100%",display:"flex", justifyContent:"center" }} >
-
-       
-        <form className={styles.loginForm} >
-          <div className={styles.formGroup}>
-            <Input
-              placeholder="Nombres"
-              type="text"
-              iconoIzq={iconoSes}
-              handleChange={handleName}
-              borderErr={touchName && formData.Nombres == ""}
-              msjErr={"El nombre es obligatorio."}
-            />
-
-            <div style={{ width: "100px" }} />
-
-            <Input
-              placeholder="Apellidos"
-              type="text"
-              iconoIzq={iconoSes}
-              handleChange={handleApellidos}
-              borderErr={touchApellidos && formData.Apellidos == ""}
-              msjErr={"El apellido es obligatorio."}
-            />
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }} >
 
 
-
-          </div>
-
-          <div className={styles.formGroup}>
-            <Input
-              placeholder="Correo"
-              type="email"
-              iconoIzq={iconoCorreo}
-              handleChange={handleCorreo}
-              borderErr={touchCorreo && formData.Correo == ""}
-              msjErr={"El correo es obligatorio."}
-            />
-
-            <div style={{ width: "100px" }} />
-
-            <Input
-              placeholder="Teléfono"
-              type="number"
-              iconoIzq={iconoTel}
-              handleChange={handleTeléfono}
-              borderErr={touchTeléfono && formData.Teléfono == ""}
-              msjErr={"El teléfono es obligatorio."}
-            />
-          </div>
-
-
-          <div className={styles.formGroup} >
-
-            <Input
-              placeholder="Contraseña"
-              type="password"
-              iconoIzq={inconoPass}
-              iconoDer={inconoPassDer}
-              handleChange={handleContraseña}
-              borderErr={touchContraseña && formData.Contraseña == ""}
-              msjErr={"La contraseña es obligatoria."}
-            />
-
-            <div style={{ width: "100px" }} />
-
-
-            <Input
-              placeholder="Confirmar contraseña"
-              type="password"
-              iconoIzq={inconoPass}
-              iconoDer={inconoPassDer}
-              handleChange={handleconfirmarContraseña}
-              borderErr={touchconfirmarContraseña && formData.confirmarContraseña !== formData.Contraseña}
-              msjErr={"Las contraseñas no coinciden."}
-            />
-          </div>
-
-
-          {/* <div className={styles.formGroup2} >
-
-            <p style={{color:"#2b469c"}}>
-              ¿A que te sabe Kraft Heinz?
-            </p>
-
-            <textarea type="text"   name="userText" onChange={handleChange} />
-
-           
-          </div> */}
-
-
-
-
-          <div className={styles.contentInputsCheck}>
-            <div className={styles.divChek} style={{ marginLeft: "18.5px" }}>
-              <input
-                type="checkbox"
-                name="aceptaTerminos"
-                checked={formData.aceptaTerminos}
-                onChange={handleChange}
+          <form className={styles.loginForm} >
+            <div className={styles.formGroup}>
+              <InputLarge
+                placeholder="Nombre y apellido"
+                type="text"
+                iconoIzq={iconoSes}
+                handleChange={handleName}
+                borderErr={touchName && formData.Nombres == ""}
+                msjErr={"El nombre es obligatorio."}
+                value={formData.Nombres}
               />
-              <label for="AceptoTérminosycondiciones">He leído y acepto los 
-                 
-                <a href="/tyc" target="_blank" style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c" }}> términos y condiciones. </a> 
-                {/* <Link to={"/tyc"} style={{ fontSize: "16px", textDecoration: "underline", color: "#2b469c", marginLeft:"5px" }}>términos y condiciones. </Link>  */}
 
 
-              </label>
             </div>
-          </div>
+
+            <div className={styles.formGroup}>
+
+
+              <Input
+                placeholder="Número de teléfono"
+                type="text"
+                iconoIzq={iconoTel}
+                handleChange={handleTeléfono}
+                borderErr={touchTeléfono && formData.Teléfono == ""}
+                msjErr={"El teléfono es obligatorio."}
+                value={formData.Teléfono}
+              />
+
+              <div style={{ width: "100px" }} />
+
+              <Input
+                placeholder="E-mail"
+                type="email"
+                iconoIzq={iconoCorreo}
+                handleChange={handleCorreo}
+                borderErr={touchCorreo && formData.Correo == ""}
+                msjErr={"El correo es obligatorio."}
+                value={formData.Correo}
+              />
+
+            </div>
+
+
+            <div className={styles.formGroup} >
+
+              <img
+                src={VoucherBTN}
+                alt="img/subir voucher"
+                className={styles.imgVoucher}
+                onClick={handleClickImagen}
+              />
+
+              <input
+                type="file"
+                accept="image/*"
+                ref={inputRef}
+                onChange={handleImagenChange}
+                style={{ display: "none" }}
+              />
+
+            </div>
 
 
 
-          <h1 className={styles.title} style={{ marginTop: "70px" }}>
-            <img
-              src={botonLog}
-              alt="iniImg"
-              className={styles.titleImg2}
-              onClick={isFormValid() ? handleSubmit : null}
-              style={{
-                filter: isFormValid() ? "none" : "grayscale(100%)",
-                opacity: isFormValid() ? 1 : 0.5,
-                pointerEvents: isFormValid() ? "auto" : "none",
-                cursor: isFormValid() ? "pointer" : "not-allowed",
-              }}
-            />
 
-          </h1>
-        </form>
-       
+            <div className={styles.formGroup} >
+
+              <Textarea
+                placeholder="¿A qué te sabe Kraft Heinz?"
+                type="text"
+                iconoIzq={iconoSes}
+                handleChange={handleText}
+                borderErr={touchText && formData.userText == ""}
+                msjErr={"La descripción es obligatoria."}
+                minHeigth={"150px"}
+              />
+
+            </div>
+
+
+
+
+
+            <h1 className={styles.title} style={{ marginTop: "70px" }}>
+              <img
+                src={botonLog}
+                alt="iniImg"
+                className={styles.titleImg2}
+                onClick={isFormValid() ? handleSubmit : null}
+                style={{
+                  filter: isFormValid() ? "none" : "grayscale(100%)",
+                  opacity: isFormValid() ? 1 : 0.5,
+                  pointerEvents: isFormValid() ? "auto" : "none",
+                  cursor: isFormValid() ? "pointer" : "not-allowed",
+                }}
+              />
+
+            </h1>
+          </form>
+
         </div>
 
         <footer className={styles.footer}>
+
+          <div className={styles.formGroup} >
+
+            <img src={textoFooter} alt="" className={styles.imgTexto} />
+
+          </div>
+
+
+
           <div className={styles.links}>
             <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
             <br className={styles.brResp} />

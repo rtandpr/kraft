@@ -36,7 +36,7 @@ const Infouser = () => {
         const fetchUsuarios = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://kraft-production.up.railway.app/user/totalUsuarios", {
+                const response = await fetch("https://kraftweb-production.up.railway.app/user/totalUsuarios", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -53,16 +53,17 @@ const Infouser = () => {
 
                 result.message.forEach((usuario) => {
 
-                    if (usuario?.dataValues?.totalPoints > 0) {
-                        setTotalIMG(totalImg + 1);
-                        totalImg += 1;
-                    }
-                    usuariosTotales.push(usuario?.dataValues)
+                    // if (usuario?.dataValues?.totalPoints > 0) {
+                    //     setTotalIMG(totalImg + 1);
+                    //     totalImg += 1;
+                    // }
+                    usuariosTotales.push(usuario)
                 });
 
 
 
                 setInfoUser(usuariosTotales);
+                setTotalIMG(usuariosTotales.length)
                 console.log("usuariosTotales", usuariosTotales);
 
                 setUsuariosTotal(result?.message?.length);
@@ -75,7 +76,6 @@ const Infouser = () => {
                     .filter((usuario) => usuario.images.length > 0);
 
                 setUsuarios(usuariosConImagen);
-                // setTotalIMG(totalImg)
                 console.log("Usuarios con imágenes:", usuariosConImagen);
                 setLoading(false);
 
@@ -142,7 +142,7 @@ const Infouser = () => {
 
         for (const user of infoUser) {
             try {
-                const response = await fetch("https://kraft-production.up.railway.app/img/getImgByidUser", {
+                const response = await fetch("https://kraftweb-production.up.railway.app/user/imgByUser", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -271,14 +271,15 @@ const Infouser = () => {
                                 <h3>{user.name} {user.lastName}</h3>
                                 <p><strong>Email:</strong> {user.email}</p>
                                 <p><strong>Teléfono:</strong> {user.tel}</p>
-                                <p><strong>Puntos:</strong> {user.totalPoints}</p>
+                                <p><strong>Texto:</strong> {user.userText}</p>
+                                {/* <p><strong>Puntos:</strong> {user.totalPoints}</p>
                                 <p><strong>Privacidad:</strong> {user.privacidad ? "Sí" : "No"}</p>
                                 <p><strong>Términos y condiciones:</strong> {user.Términosycondiciones ? "Sí" : "No"}</p>
-                                <p><strong>Recibir info:</strong> {user.recibirinformación ? "Sí" : "No"}</p>
+                                <p><strong>Recibir info:</strong> {user.recibirinformación ? "Sí" : "No"}</p> */}
 
                                 {user?.images?.length > 0 && (
                                     <div>
-                                        <h4>Imágenes</h4>
+                                        <h4>Imágen</h4>
                                         <div className={styles.imageGrid}>
                                             {user.images.map((img, i) => (
                                                 <img

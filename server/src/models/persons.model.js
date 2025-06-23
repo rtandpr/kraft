@@ -9,7 +9,7 @@ class Person extends Model {
       sequelize,
       tableName: PERSON_TABLE,
       modelName: "Person",
-      timestamps: false,
+      timestamps: true,
     };
   }
 }
@@ -29,11 +29,6 @@ const PersonSchema = {
     field: "name",
   },
 
-  lastName: {
-    allowNull: false,
-    type: DataTypes.STRING,
-    field: "lastName", 
-  },
 
   tel: {
     allowNull: false,
@@ -41,17 +36,6 @@ const PersonSchema = {
     field: "phone", 
   },
 
-  pass: {  
-    allowNull: false,
-    type: DataTypes.STRING,
-    field: "pass"
-  },
-
-  tokenResetPass: {  
-    allowNull: true,
-    type: DataTypes.STRING,
-    field: "tokenResetPass"
-  },
 
   email: {  
     allowNull: false,
@@ -62,36 +46,19 @@ const PersonSchema = {
     },
   },
 
-  // userText: {
-  //   allowNull: true,
-  //   type: DataTypes.STRING,
-  //   field: "userText",
-  // },
+  img: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+      field: "img_voucher",
+    },
 
-  Términosycondiciones: {  
-    allowNull: false,
-    type: DataTypes.BOOLEAN,
-    field: "Términosycondiciones",
-  },
-
-  // recibirinformación: {  
-  //   allowNull: false,
-  //   type: DataTypes.BOOLEAN,
-  //   field: "recibirinformación",
-  // },
-
-
-  confirmEmail: {  
+  userText: {
     allowNull: true,
-    type: DataTypes.BOOLEAN,
-    field: "confirmEmail",
+    type: DataTypes.STRING,
+    field: "userText",
   },
 
-  totalPoints: {  
-    allowNull: true,
-    type: DataTypes.INTEGER,
-    field: "totalPoints",
-  },
+
 
 };
 

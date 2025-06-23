@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./input.module.css";
+import styles from "./textArea.module.css";
 
-const Input = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr, msjErr,value }) => {
+const Textarea = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr, msjErr,minHeigth }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     // Solo aplicar el toggle si el tipo original es password
@@ -17,21 +17,21 @@ const Input = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr,
 
     return (
         <div className={styles.content} >
-            <div className={styles.contentInput} >
+            <div className={styles.contentInput}>
                 <label className={styles.label}>
                     
                     {placeholder}
                 </label>
 
-                <input
+                <textarea
+
                     type={inputType}
                     id={type}
                     name={type}
                     className={styles.inputField}
                     onChange={handleChange}
-                    value={value}
                     // style={{ border: borderErr ? "2px solid red" : "1px solid white" }}
-                  
+                     style={{  minHeight:minHeigth ? minHeigth  : "" }}
                 />
 
                 {borderErr && <p className={styles.Perr}>{msjErr}</p>}
@@ -40,4 +40,4 @@ const Input = ({ type, placeholder, iconoIzq, iconoDer, handleChange, borderErr,
     );
 };
 
-export default Input;
+export default Textarea;

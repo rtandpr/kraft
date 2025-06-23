@@ -59,18 +59,14 @@ const Home = () => {
         
   
         
-        if(dateUser){
-          navigate("/Perfil")
-        }else{
-          navigate("/inicioSesion")
-        }
+        navigate("/Registro")
   
 
   };
 
   return (
     <div className={styles.homeFondo}>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className={styles.homeBackground}>
 
         <div className={styles.containerLogo} style={{ marginTop: "-40px" }}>
@@ -95,7 +91,7 @@ const Home = () => {
         </div>
 
 
-        <div className={styles.contentText}  >
+        <div className={styles.contentText} >
 
 
           <p>Sube tu recibo de compra con productos participantes</p>
@@ -108,18 +104,10 @@ const Home = () => {
             onClick={() => redirect("")}
           />
 
-
-          {/* <img
-            // data-aos="zoom-in"
-            src={text2IMG}
-            className={styles.text2IMG}
-          /> */}
-
-
-
-
-
         </div>
+
+
+        
         <div className={styles.footerRes}>
           <Footer></Footer>
         </div>
