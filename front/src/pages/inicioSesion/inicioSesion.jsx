@@ -76,7 +76,7 @@ const InicioSesion = () => {
     }
 
     try {
-      const response = await fetch("https://kraftweb-production.up.railway.app/user/getUserByEmail", {
+      const response = await fetch("https://vivacious-flexibility-production.up.railway.app/user/getUserByEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -132,7 +132,7 @@ const InicioSesion = () => {
         email: formData.Correo,
       }
 
-      const response = await fetch("https://kraftweb-production.up.railway.app/user/generateTokenByUser", {
+      const response = await fetch("https://vivacious-flexibility-production.up.railway.app/user/generateTokenByUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

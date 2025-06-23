@@ -36,7 +36,7 @@ const Infouser = () => {
         const fetchUsuarios = async () => {
             setLoading(true);
             try {
-                const response = await fetch("https://kraftweb-production.up.railway.app/user/totalUsuarios", {
+                const response = await fetch("https://vivacious-flexibility-production.up.railway.app/user/totalUsuarios", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -142,7 +142,7 @@ const Infouser = () => {
 
         for (const user of infoUser) {
             try {
-                const response = await fetch("https://kraftweb-production.up.railway.app/user/imgByUser", {
+                const response = await fetch("https://vivacious-flexibility-production.up.railway.app/user/imgByUser", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
