@@ -90,3 +90,11 @@
   border-radius: 8px;
   border: 1px solid #ddd;
 }
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}

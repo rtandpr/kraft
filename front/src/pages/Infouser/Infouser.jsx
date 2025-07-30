@@ -129,19 +129,59 @@ const Infouser = () => {
         saveAs(data, "usuarios.xlsx");
     };
 
-    const [ImgUser, setImgUser] = useState(null);
-    const [IdUser, setIdUser] = useState(null);
 
-    const fetchImagesForUsers = async () => {
-        console.log("empieza");
+    const elementosPorPagina = 50;
+    const [paginaActual, setPaginaActual] = useState(0); // Página actual (0 = 1 al 50)
+    const [inicio, setIncio] = useState(1);
+    const [fin, setFin] = useState(50);
+    const [numUsuario, setNumUsuario] = useState();
+ 
 
+    const handlePaginaSiguiente = () => {
+        const nuevaPagina = paginaActual + 1;
+        setPaginaActual(nuevaPagina);
+        const inicio = nuevaPagina * elementosPorPagina + 1;
+        const fin = inicio + elementosPorPagina - 1;
+        if(!loading){
+            setIncio(inicio);
+            setFin(fin);
+            fetchImagesForUsers(inicio,fin)
+        }
+    };
+
+    const handlePaginaAnterior = () => {
+        if (paginaActual === 0) return;
+        const nuevaPagina = paginaActual - 1;
+        setPaginaActual(nuevaPagina);
+        const inicio = nuevaPagina * elementosPorPagina + 1;
+        const fin = inicio + elementosPorPagina - 1;
+        if(!loading){
+            setIncio(inicio);
+            setFin(fin);
+            fetchImagesForUsers(inicio,fin)
+        }
+
+    };
+
+
+
+    const fetchImagesForUsers = async (ini,fin) => {
+
+
+        if(loading) return; // Evita múltiples llamadas si ya está cargando
+        setUsuarios([]);
         setLoading(true);
         const usuariosConImagenes = [];
-        console.log("usuarios", infoUser);
-        
+         setLoading(true);
+         
+
 
         for (const user of infoUser) {
+           if(user.id < fin && user.id >= ini) {
             try {
+
+                setNumUsuario(user.id);
+                
                 const response = await fetch("https://vivacious-flexibility-production.up.railway.app/user/imgByUser", {
                     method: "POST",
                     headers: {
@@ -156,10 +196,6 @@ const Infouser = () => {
                     ...user,
                     images: result.data || [],
                 });
-
-
-              
-                
             } catch (error) {
                 console.error(`Error al obtener imágenes de usuario ${user.id}:`, error);
                 usuariosConImagenes.push({
@@ -167,9 +203,10 @@ const Infouser = () => {
                     images: [],
                 });
             }
+
+            }
         }
 
-        console.log("usuariosConImagenes:", usuariosConImagenes);
         setUsuarios(usuariosConImagenes);
         setLoading(false);
     };
@@ -237,7 +274,7 @@ const Infouser = () => {
 
 
                     <div className={styles.divCenter}>
-                        <button onClick={fetchImagesForUsers} style={{ marginBottom: "20px" }} className={styles.btnStyle}>Ver Imagenes</button>
+                        <button onClick={() => fetchImagesForUsers(1,50)} style={{ marginBottom: "20px" }} className={styles.btnStyle}>Ver Imagenes</button>
                     </div>
 
 
@@ -264,7 +301,7 @@ const Infouser = () => {
                     )}
 
                     {loading ? (
-                        <h2 style={{ textAlign: "center", marginBottom: "30px" }}>CARGANDO...</h2>
+                        <h2 style={{ textAlign: "center", marginBottom: "30px" }}>CARGANDO USUARIO {numUsuario}...</h2>
                     ) : (
                         usuarios?.map((user, index) => (
                             <div key={index} className={styles.userCard}>
@@ -294,6 +331,27 @@ const Infouser = () => {
                             </div>
                         ))
                     )}
+
+
+
+                    <div className={styles.pagination}>
+                        <button className={styles.btnStyle} onClick={handlePaginaAnterior} disabled={paginaActual === 0}>
+                            Página anterior
+                        </button>
+                        <span style={{ margin: '0 10px' }}>
+                        </span>
+                        <button className={styles.btnStyle} onClick={handlePaginaSiguiente}>
+                            Página siguiente
+                        </button>
+                    </div>
+
+
+
+                    <div className={styles.pagination}>
+                        <span style={{ margin: '0 10px' }}>
+                            Mostrando del {inicio} al {fin}
+                        </span>
+                    </div>
                 </div>
             )}
         </div>
